@@ -1,0 +1,28 @@
+2025-06-23 12:53:49,698 NanoPlot 1.44.1 started with arguments Namespace(threads=4, verbose=False, store=False, raw=False, huge=False, outdir='/users/rg/baygun/BlaER/long_read/nanoplot/result_nanoplot/FAX00264_20240115_1817_5ed29589', no_static=False, prefix='', tsv_stats=False, only_report=False, info_in_report=False, maxlength=None, minlength=None, drop_outliers=False, downsample=None, loglength=False, percentqual=False, alength=False, minqual=None, runtime_until=None, readtype='1D', barcoded=False, no_supplementary=False, color='#4CB391', colormap='Greens', format=['png'], plots=['kde', 'dot'], legacy=None, listcolors=False, listcolormaps=False, no_N50=False, N50=True, title=None, font_scale=1, dpi=100, hide_stats=False, fastq=None, fasta=None, fastq_rich=None, fastq_minimal=None, summary=None, bam=None, ubam=['/users/rg/baygun/BlaER/files/long_read_files/FAX00264_20240115_1817_5ed29589.bam'], cram=None, pickle=None, feather=None, path='/users/rg/baygun/BlaER/long_read/nanoplot/result_nanoplot/FAX00264_20240115_1817_5ed29589/')
+2025-06-23 12:53:49,698 Python version is: 3.12.11 | packaged by conda-forge | (main, Jun  4 2025, 14:45:31) [GCC 13.3.0]
+2025-06-23 12:53:49,840 Nanoget: Starting to collect statistics from ubam file /users/rg/baygun/BlaER/files/long_read_files/FAX00264_20240115_1817_5ed29589.bam.
+2025-06-23 12:55:16,231 Nanoget: No index for bam file could be found, created index.
+2025-06-23 13:00:41,714 Nanoget: ubam /users/rg/baygun/BlaER/files/long_read_files/FAX00264_20240115_1817_5ed29589.bam contains 12344719 reads.
+2025-06-23 13:00:44,458 Reduced DataFrame memory usage from 1189.0571126937866Mb to 1189.0571126937866Mb
+2025-06-23 13:00:49,313 Nanoget: Gathered all metrics of 12344719 reads
+2025-06-23 13:00:58,460 Calculated statistics
+2025-06-23 13:00:58,461 Using sequenced read lengths for plotting.
+2025-06-23 13:00:58,876 Removed 5 artefactual reads with very short length and very high quality.
+2025-06-23 13:01:07,775 Calculated statistics
+2025-06-23 13:01:07,819 NanoPlot:  Valid color #4CB391.
+2025-06-23 13:01:07,819 NanoPlot:  Valid colormap Greens.
+2025-06-23 13:01:08,943 NanoPlot:  Creating length plots for Read length.
+2025-06-23 13:01:08,946 NanoPlot: Using 12344714 reads with read length N50 of 919bp and maximum of 313214bp.
+2025-06-23 13:01:16,391 Saved /users/rg/baygun/BlaER/long_read/nanoplot/result_nanoplot/FAX00264_20240115_1817_5ed29589/WeightedHistogramReadlength  as png (or png for --legacy)
+2025-06-23 13:01:17,024 Saved /users/rg/baygun/BlaER/long_read/nanoplot/result_nanoplot/FAX00264_20240115_1817_5ed29589/WeightedLogTransformed_HistogramReadlength  as png (or png for --legacy)
+2025-06-23 13:01:17,608 Saved /users/rg/baygun/BlaER/long_read/nanoplot/result_nanoplot/FAX00264_20240115_1817_5ed29589/Non_weightedHistogramReadlength  as png (or png for --legacy)
+2025-06-23 13:01:18,195 Saved /users/rg/baygun/BlaER/long_read/nanoplot/result_nanoplot/FAX00264_20240115_1817_5ed29589/Non_weightedLogTransformed_HistogramReadlength  as png (or png for --legacy)
+2025-06-23 13:01:18,196 NanoPlot: Creating yield by minimal length plot for Read length.
+2025-06-23 13:01:22,736 Saved /users/rg/baygun/BlaER/long_read/nanoplot/result_nanoplot/FAX00264_20240115_1817_5ed29589/Yield_By_Length  as png (or png for --legacy)
+2025-06-23 13:01:22,739 Created length plots
+2025-06-23 13:01:22,995 NanoPlot: Creating Read lengths vs Average read quality plots using 12344714 reads.
+2025-06-23 13:01:24,376 Saved /users/rg/baygun/BlaER/long_read/nanoplot/result_nanoplot/FAX00264_20240115_1817_5ed29589/LengthvsQualityScatterPlot_dot  as png (or png for --legacy)
+2025-06-23 13:01:24,931 Saved /users/rg/baygun/BlaER/long_read/nanoplot/result_nanoplot/FAX00264_20240115_1817_5ed29589/LengthvsQualityScatterPlot_kde  as png (or png for --legacy)
+2025-06-23 13:01:24,933 Created LengthvsQual plot
+2025-06-23 13:01:24,933 Writing html report.
+2025-06-23 13:01:25,001 Finished!
