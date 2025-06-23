@@ -1,7 +1,0 @@
-2025-06-23 14:10:32	-	nasty_linnaeus	-	2dcb39da531ce7a058b1678c340d2ac9	cfeb170e-e6ee-42dd-8bdf-2b5b8b2a52dc	nextflow run main.nf
-2025-06-23 14:12:35	19.8s	sharp_picasso	ERR	aa75cc365b60306c139ec236ddfa2993	d4112eed-4c92-41e0-9641-344de1933109	nextflow run main.nf
-2025-06-23 14:41:33	35m 58s	stupefied_mercator	OK	0b68d100d83d5f3bc79d45476f364275	5b68e3ef-835a-41c7-9979-0f551534bd5b	nextflow run main.nf
-2025-06-23 17:49:45	33m 48s	drunk_turing	OK	0b68d100d83d5f3bc79d45476f364275	b23d8291-0e49-4d4b-b915-cafb51f90112	nextflow run main.nf
-2025-06-23 18:43:54	1.4s	elated_legentil	ERR	9b573819c83aaff857a751ee3b425abc	61fe171d-9595-4578-ad5c-ac39535d5011	nextflow run main.nf
-2025-06-23 18:48:18	1.4s	soggy_torricelli	ERR	9b573819c83aaff857a751ee3b425abc	7a3d1690-b31e-4137-8a74-c1314a1c1df4	nextflow run main.nf
-2025-06-23 18:53:06	28.3s	small_venter	ERR	4fd2fbf62a2976e1b711459fbc8bf7ef	a48159fa-80ed-40ba-88e1-0fb3f848fe4a	nextflow run main.nf
