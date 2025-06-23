@@ -3,3 +3,5 @@ short_read/fastqc/result_fastqc
 ref
 long_read/epi2me
 long_read/nanoplot/result_nanoplot/
+/users/rg/baygun/BlaER_crg/long_read/nextflow/resul_nanoplot
+/users/rg/baygun/BlaER_crg/long_read/nextflow/work
