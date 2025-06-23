@@ -1,0 +1,28 @@
+2025-06-23 14:57:34,255 NanoPlot 1.44.1 started with arguments Namespace(threads=4, verbose=False, store=False, raw=False, huge=False, outdir='result_nanoplot/FAX02360_20240115_1630_e5122b92', no_static=False, prefix='', tsv_stats=False, only_report=False, info_in_report=False, maxlength=None, minlength=None, drop_outliers=False, downsample=None, loglength=False, percentqual=False, alength=False, minqual=None, runtime_until=None, readtype='1D', barcoded=False, no_supplementary=False, color='#4CB391', colormap='Greens', format=['png'], plots=['kde', 'dot'], legacy=None, listcolors=False, listcolormaps=False, no_N50=False, N50=True, title=None, font_scale=1, dpi=100, hide_stats=False, fastq=None, fasta=None, fastq_rich=None, fastq_minimal=None, summary=None, bam=None, ubam=['FAX02360_20240115_1630_e5122b92.bam'], cram=None, pickle=None, feather=None, path='result_nanoplot/FAX02360_20240115_1630_e5122b92/')
+2025-06-23 14:57:34,255 Python version is: 3.12.11 | packaged by conda-forge | (main, Jun  4 2025, 14:45:31) [GCC 13.3.0]
+2025-06-23 14:57:34,268 Nanoget: Starting to collect statistics from ubam file FAX02360_20240115_1630_e5122b92.bam.
+2025-06-23 14:59:29,810 Nanoget: No index for bam file could be found, created index.
+2025-06-23 15:06:49,244 Nanoget: ubam FAX02360_20240115_1630_e5122b92.bam contains 17013763 reads.
+2025-06-23 15:06:52,813 Reduced DataFrame memory usage from 1638.7845945358276Mb to 1638.7845945358276Mb
+2025-06-23 15:06:59,070 Nanoget: Gathered all metrics of 17013763 reads
+2025-06-23 15:07:11,069 Calculated statistics
+2025-06-23 15:07:11,070 Using sequenced read lengths for plotting.
+2025-06-23 15:07:11,663 Removed 4 artefactual reads with very short length and very high quality.
+2025-06-23 15:07:23,891 Calculated statistics
+2025-06-23 15:07:23,939 NanoPlot:  Valid color #4CB391.
+2025-06-23 15:07:23,939 NanoPlot:  Valid colormap Greens.
+2025-06-23 15:07:25,376 NanoPlot:  Creating length plots for Read length.
+2025-06-23 15:07:25,380 NanoPlot: Using 17013759 reads with read length N50 of 903bp and maximum of 355369bp.
+2025-06-23 15:07:26,184 Saved result_nanoplot/FAX02360_20240115_1630_e5122b92/WeightedHistogramReadlength  as png (or png for --legacy)
+2025-06-23 15:07:26,859 Saved result_nanoplot/FAX02360_20240115_1630_e5122b92/WeightedLogTransformed_HistogramReadlength  as png (or png for --legacy)
+2025-06-23 15:07:27,482 Saved result_nanoplot/FAX02360_20240115_1630_e5122b92/Non_weightedHistogramReadlength  as png (or png for --legacy)
+2025-06-23 15:07:28,095 Saved result_nanoplot/FAX02360_20240115_1630_e5122b92/Non_weightedLogTransformed_HistogramReadlength  as png (or png for --legacy)
+2025-06-23 15:07:28,097 NanoPlot: Creating yield by minimal length plot for Read length.
+2025-06-23 15:07:30,145 Saved result_nanoplot/FAX02360_20240115_1630_e5122b92/Yield_By_Length  as png (or png for --legacy)
+2025-06-23 15:07:30,147 Created length plots
+2025-06-23 15:07:30,565 NanoPlot: Creating Read lengths vs Average read quality plots using 17013759 reads.
+2025-06-23 15:07:32,204 Saved result_nanoplot/FAX02360_20240115_1630_e5122b92/LengthvsQualityScatterPlot_dot  as png (or png for --legacy)
+2025-06-23 15:07:32,719 Saved result_nanoplot/FAX02360_20240115_1630_e5122b92/LengthvsQualityScatterPlot_kde  as png (or png for --legacy)
+2025-06-23 15:07:32,722 Created LengthvsQual plot
+2025-06-23 15:07:32,723 Writing html report.
+2025-06-23 15:07:32,740 Finished!

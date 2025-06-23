@@ -1,0 +1,3 @@
+2025-06-23 14:10:32	-	nasty_linnaeus	-	2dcb39da531ce7a058b1678c340d2ac9	cfeb170e-e6ee-42dd-8bdf-2b5b8b2a52dc	nextflow run main.nf
+2025-06-23 14:12:35	19.8s	sharp_picasso	ERR	aa75cc365b60306c139ec236ddfa2993	d4112eed-4c92-41e0-9641-344de1933109	nextflow run main.nf
+2025-06-23 14:41:33	35m 58s	stupefied_mercator	OK	0b68d100d83d5f3bc79d45476f364275	5b68e3ef-835a-41c7-9979-0f551534bd5b	nextflow run main.nf
