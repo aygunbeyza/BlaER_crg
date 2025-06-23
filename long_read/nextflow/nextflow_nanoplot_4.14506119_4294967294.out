@@ -1,0 +1,110 @@
+no change     /users/rg/baygun/miniforge3/condabin/conda
+no change     /users/rg/baygun/miniforge3/bin/conda
+no change     /users/rg/baygun/miniforge3/bin/conda-env
+no change     /users/rg/baygun/miniforge3/bin/activate
+no change     /users/rg/baygun/miniforge3/bin/deactivate
+no change     /users/rg/baygun/miniforge3/etc/profile.d/conda.sh
+no change     /users/rg/baygun/miniforge3/etc/fish/conf.d/conda.fish
+no change     /users/rg/baygun/miniforge3/shell/condabin/Conda.psm1
+no change     /users/rg/baygun/miniforge3/shell/condabin/conda-hook.ps1
+no change     /users/rg/baygun/miniforge3/lib/python3.12/site-packages/xontrib/conda.xsh
+no change     /users/rg/baygun/miniforge3/etc/profile.d/conda.csh
+no change     /users/rg/baygun/.bashrc
+No action taken.
+
+ N E X T F L O W   ~  version 24.10.3
+
+Launching `main.nf` [small_venter] DSL2 - revision: 4fd2fbf62a
+
+[-        ] run_nanoplot -
+
+executor >  local (1)
+[27/b87424] run…0240115_1815_946aeace.bam) | 0 of 4
+
+executor >  local (2)
+[7e/824638] run…0240115_1817_5ed29589.bam) | 0 of 4
+ERROR ~ Error executing process > 'run_nanoplot (FAX00328_20240115_1815_946aeace.bam)'
+
+Caused by:
+  Process `run_nanoplot (FAX00328_20240115_1815_946aeace.bam)` terminated with an error exit status (2)
+
+
+Command executed:
+
+  mkdir -p FAX00328_20240115_1815_946aeace
+  NanoPlot --ubam FAX00328_20240115_1815_946aeace.bam -o FAX00328_20240115_1815_946aeace --threads 4 --NS0
+  mv FAX00328_20240115_1815_946aeace/* .
+
+Command exit status:
+  2
+
+Command output:
+  (empty)
+
+Command error:
+  usage: NanoPlot [-h] [-v] [-t THREADS] [--verbose] [--store] [--raw] [--huge]
+                  [-o OUTDIR] [--no_static] [-p PREFIX] [--tsv_stats]
+                  [--only-report] [--info_in_report] [--maxlength N]
+                  [--minlength N] [--drop_outliers] [--downsample N]
+                  [--loglength] [--percentqual] [--alength] [--minqual N]
+                  [--runtime_until N] [--readtype {1D,2D,1D2}] [--barcoded]
+                  [--no_supplementary] [-c COLOR] [-cm COLORMAP]
+                  [-f [{png,jpg,jpeg,webp,svg,pdf,eps,json} ...]]
+                  [--plots [{kde,hex,dot} ...]] [--legacy [{kde,dot,hex} ...]]
+                  [--listcolors] [--listcolormaps] [--no-N50] [--N50]
+                  [--title TITLE] [--font_scale FONT_SCALE] [--dpi DPI]
+                  [--hide_stats]
+                  (--fastq file [file ...] | --fasta file [file ...] | --fastq_rich file [file ...] | --fastq_minimal file [file ...] | --summary file [file ...] | --bam file [file ...] | --ubam file [file ...] | --cram file [file ...] | --pickle pickle | --feather file [file ...])
+  NanoPlot: error: unrecognized arguments: --NS0
+
+Work dir:
+  /users/rg/baygun/BlaER_crg/long_read/nextflow/work/27/b874246694649b6ca9cab41d0b94ac
+
+Tip: view the complete command output by changing to the process work dir and entering the command `cat .command.out`
+
+ -- Check '.nextflow.log' file for details
+WARN: Killing running tasks (1)
+
+executor >  local (2)
+[7e/824638] run…0240115_1817_5ed29589.bam) | 1 of 4, failed: 1
+ERROR ~ Error executing process > 'run_nanoplot (FAX00328_20240115_1815_946aeace.bam)'
+
+Caused by:
+  Process `run_nanoplot (FAX00328_20240115_1815_946aeace.bam)` terminated with an error exit status (2)
+
+
+Command executed:
+
+  mkdir -p FAX00328_20240115_1815_946aeace
+  NanoPlot --ubam FAX00328_20240115_1815_946aeace.bam -o FAX00328_20240115_1815_946aeace --threads 4 --NS0
+  mv FAX00328_20240115_1815_946aeace/* .
+
+Command exit status:
+  2
+
+Command output:
+  (empty)
+
+Command error:
+  usage: NanoPlot [-h] [-v] [-t THREADS] [--verbose] [--store] [--raw] [--huge]
+                  [-o OUTDIR] [--no_static] [-p PREFIX] [--tsv_stats]
+                  [--only-report] [--info_in_report] [--maxlength N]
+                  [--minlength N] [--drop_outliers] [--downsample N]
+                  [--loglength] [--percentqual] [--alength] [--minqual N]
+                  [--runtime_until N] [--readtype {1D,2D,1D2}] [--barcoded]
+                  [--no_supplementary] [-c COLOR] [-cm COLORMAP]
+                  [-f [{png,jpg,jpeg,webp,svg,pdf,eps,json} ...]]
+                  [--plots [{kde,hex,dot} ...]] [--legacy [{kde,dot,hex} ...]]
+                  [--listcolors] [--listcolormaps] [--no-N50] [--N50]
+                  [--title TITLE] [--font_scale FONT_SCALE] [--dpi DPI]
+                  [--hide_stats]
+                  (--fastq file [file ...] | --fasta file [file ...] | --fastq_rich file [file ...] | --fastq_minimal file [file ...] | --summary file [file ...] | --bam file [file ...] | --ubam file [file ...] | --cram file [file ...] | --pickle pickle | --feather file [file ...])
+  NanoPlot: error: unrecognized arguments: --NS0
+
+Work dir:
+  /users/rg/baygun/BlaER_crg/long_read/nextflow/work/27/b874246694649b6ca9cab41d0b94ac
+
+Tip: view the complete command output by changing to the process work dir and entering the command `cat .command.out`
+
+ -- Check '.nextflow.log' file for details
+

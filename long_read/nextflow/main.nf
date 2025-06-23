@@ -1,26 +1,25 @@
-nextflow.enable.dsl=2
-
 workflow {
-  Channel.fromPath("${params.bam_folder}/*.bam")
-         .set { bam_files }
-
-  run_nanoplot(bam_files)
+    Channel.fromPath("${params.bam_folder}/*.bam")
+        .set { bam_files }
+    run_nanoplot(bam_files)
 }
 
 process run_nanoplot {
-  tag "$bam_file"
+    publishDir "result_nanoplot", mode: 'copy'
+    tag "$bam_file"
 
-  input:
+    input:
     path bam_file
 
-  output:
-    path "result_nanoplot/${bam_file.simpleName}/*", optional: true
+    output:
+    path "*"
 
-  script:
+    script:
+    def file_id = bam_file.getBaseName()  // Properly defining file_id
     """
-    file_id=`basename $bam_file .bam`
-    mkdir -p result_nanoplot/\${file_id}
-    NanoPlot --ubam $bam_file -o result_nanoplot/\${file_id} --threads 4 --N50
+    mkdir -p $file_id
+    NanoPlot --ubam $bam_file -o $file_id --threads 4 --NS0
+    mv $file_id/* .
     """
 }
 
