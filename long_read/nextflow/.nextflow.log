@@ -61,3 +61,15 @@ Jun-24 19:36:16.496 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! exe
 Jun-24 19:38:41.506 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 1; name: NanoPlot (1); status: COMPLETED; exit: 0; error: -; workDir: /users/rg/baygun/BlaER_crg/long_read/nextflow/work/34/fd1191c074daf354aba569a0888178]
 Jun-24 19:38:41.510 [Task monitor] DEBUG nextflow.util.ThreadPoolBuilder - Creating thread pool 'TaskFinalizer' minSize=10; maxSize=12; workQueue=LinkedBlockingQueue[10000]; allowCoreThreadTimeout=false
 Jun-24 19:38:57.350 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 3; name: NanoPlot (3); status: COMPLETED; exit: 0; error: -; workDir: /users/rg/baygun/BlaER_crg/long_read/nextflow/work/9a/d9f89d169db9f06c25dbe7cdda48dd]
+Jun-24 19:40:20.694 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 4; name: NanoPlot (4); status: COMPLETED; exit: 0; error: -; workDir: /users/rg/baygun/BlaER_crg/long_read/nextflow/work/4f/725d2993576d3175fecafb93d35164]
+Jun-24 19:41:16.564 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 1 -- submitted tasks are shown below
+~> TaskHandler[id: 2; name: NanoPlot (2); status: RUNNING; exit: -; error: -; workDir: /users/rg/baygun/BlaER_crg/long_read/nextflow/work/02/a343e07565ad29b77740640534c2ac]
+Jun-24 19:41:18.594 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 2; name: NanoPlot (2); status: COMPLETED; exit: 0; error: -; workDir: /users/rg/baygun/BlaER_crg/long_read/nextflow/work/02/a343e07565ad29b77740640534c2ac]
+Jun-24 19:41:18.619 [main] DEBUG nextflow.Session - Session await > all processes finished
+Jun-24 19:41:18.695 [Task monitor] DEBUG n.processor.TaskPollingMonitor - <<< barrier arrives (monitor: local) - terminating tasks monitor poll loop
+Jun-24 19:41:18.695 [main] DEBUG nextflow.Session - Session await > all barriers passed
+Jun-24 19:41:18.698 [main] DEBUG nextflow.util.ThreadPoolManager - Thread pool 'TaskFinalizer' shutdown completed (hard=false)
+Jun-24 19:41:18.702 [main] DEBUG n.trace.WorkflowStatsObserver - Workflow completed > WorkflowStats[succeededCount=4; failedCount=0; ignoredCount=0; cachedCount=0; pendingCount=0; submittedCount=0; runningCount=0; retriesCount=0; abortedCount=0; succeedDuration=34m 11s; failedDuration=0ms; cachedDuration=0ms;loadCpus=0; loadMemory=0; peakRunning=4; peakCpus=4; peakMemory=0; ]
+Jun-24 19:41:18.875 [main] DEBUG nextflow.cache.CacheDB - Closing CacheDB done
+Jun-24 19:41:18.889 [main] DEBUG nextflow.util.ThreadPoolManager - Thread pool 'FileTransfer' shutdown completed (hard=false)
+Jun-24 19:41:18.889 [main] DEBUG nextflow.script.ScriptRunner - > Execution complete -- Goodbye
