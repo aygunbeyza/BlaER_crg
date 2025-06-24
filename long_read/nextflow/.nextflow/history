@@ -28,4 +28,4 @@
 2025-06-24 18:53:49	2s	sick_cori	ERR	01223c1f9048fffea1291158f332bfb2	37bfe73b-5248-4761-99b2-435f328f2a1f	nextflow run main.nf
 2025-06-24 19:15:40	1.2s	maniac_mccarthy	ERR	48ed442b7e07d13ad23f7251d8fcee4a	7940fc1d-fb56-45ff-9e10-e52c67cd47a7	nextflow run main.nf --outdir /users/rg/baygun/BlaER_crg/long_read/nextflow/result_nanoplot
 2025-06-24 19:17:38	10m 12s	grave_goldwasser	OK	b366fe18ef2886eadcc3934c951d7f83	c6750985-f685-4e78-a388-90fde8512abb	nextflow run main.nf --outdir /users/rg/baygun/BlaER_crg/long_read/nextflow/result_nanoplot
-2025-06-24 19:31:15	-	gloomy_panini	-	b366fe18ef2886eadcc3934c951d7f83	a9deebb0-6eb9-4c91-9ea2-4b5791ffde3f	nextflow run main.nf --outdir /users/rg/baygun/BlaER_crg/long_read/nextflow/result_nanoplot
+2025-06-24 19:31:15	10m 4s	gloomy_panini	OK	b366fe18ef2886eadcc3934c951d7f83	a9deebb0-6eb9-4c91-9ea2-4b5791ffde3f	nextflow run main.nf --outdir /users/rg/baygun/BlaER_crg/long_read/nextflow/result_nanoplot
