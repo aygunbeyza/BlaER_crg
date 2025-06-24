@@ -53,3 +53,8 @@ Jun-24 19:31:16.653 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - L
 Jun-24 19:31:16.662 [Task submitter] INFO  nextflow.Session - [9a/d9f89d] Submitted process > NanoPlot (3)
 Jun-24 19:31:16.672 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
 Jun-24 19:31:16.675 [Task submitter] INFO  nextflow.Session - [02/a343e0] Submitted process > NanoPlot (2)
+Jun-24 19:36:16.496 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 4 -- submitted tasks are shown below
+~> TaskHandler[id: 4; name: NanoPlot (4); status: RUNNING; exit: -; error: -; workDir: /users/rg/baygun/BlaER_crg/long_read/nextflow/work/4f/725d2993576d3175fecafb93d35164]
+~> TaskHandler[id: 1; name: NanoPlot (1); status: RUNNING; exit: -; error: -; workDir: /users/rg/baygun/BlaER_crg/long_read/nextflow/work/34/fd1191c074daf354aba569a0888178]
+~> TaskHandler[id: 3; name: NanoPlot (3); status: RUNNING; exit: -; error: -; workDir: /users/rg/baygun/BlaER_crg/long_read/nextflow/work/9a/d9f89d169db9f06c25dbe7cdda48dd]
+~> TaskHandler[id: 2; name: NanoPlot (2); status: RUNNING; exit: -; error: -; workDir: /users/rg/baygun/BlaER_crg/long_read/nextflow/work/02/a343e07565ad29b77740640534c2ac]
