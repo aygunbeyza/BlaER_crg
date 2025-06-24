@@ -24,4 +24,8 @@
 2025-06-24 18:28:21	2.2s	curious_almeida	ERR	f3235adf2252d0aa48aee0a920c1e420	e2be3f42-553a-490b-986c-f8cb3317b3bc	nextflow run main.nf
 2025-06-24 18:32:52	2.2s	tiny_fermat	ERR	982c432224f1b28dcc215754a1b29c5b	9dd6ebe3-f735-464f-b6d2-6d198b305d4e	nextflow run main.nf
 2025-06-24 18:36:59	13.2s	cheeky_gauss	ERR	411f91b6506aa0c1998b43ceb24dcacc	c118f7f2-30f6-4fe5-99ad-55d772486bf3	nextflow run main.nf
-2025-06-24 18:39:01	-	determined_williams	-	d29a2ced2bc4b3c672f097c6b9497f56	eae1c6dd-adcb-465c-9f97-2c83bdcda38f	nextflow run main.nf
+2025-06-24 18:39:01	10m 14s	determined_williams	OK	d29a2ced2bc4b3c672f097c6b9497f56	eae1c6dd-adcb-465c-9f97-2c83bdcda38f	nextflow run main.nf
+2025-06-24 18:53:49	2s	sick_cori	ERR	01223c1f9048fffea1291158f332bfb2	37bfe73b-5248-4761-99b2-435f328f2a1f	nextflow run main.nf
+2025-06-24 19:15:40	1.2s	maniac_mccarthy	ERR	48ed442b7e07d13ad23f7251d8fcee4a	7940fc1d-fb56-45ff-9e10-e52c67cd47a7	nextflow run main.nf --outdir /users/rg/baygun/BlaER_crg/long_read/nextflow/result_nanoplot
+2025-06-24 19:17:38	10m 12s	grave_goldwasser	OK	b366fe18ef2886eadcc3934c951d7f83	c6750985-f685-4e78-a388-90fde8512abb	nextflow run main.nf --outdir /users/rg/baygun/BlaER_crg/long_read/nextflow/result_nanoplot
+2025-06-24 19:31:15	-	gloomy_panini	-	b366fe18ef2886eadcc3934c951d7f83	a9deebb0-6eb9-4c91-9ea2-4b5791ffde3f	nextflow run main.nf --outdir /users/rg/baygun/BlaER_crg/long_read/nextflow/result_nanoplot
