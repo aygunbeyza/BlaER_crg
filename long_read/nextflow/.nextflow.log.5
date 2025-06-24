@@ -1,0 +1,55 @@
+Jun-24 17:59:59.016 [main] DEBUG nextflow.cli.Launcher - $> nextflow run main.nf
+Jun-24 17:59:59.124 [main] DEBUG nextflow.cli.CmdRun - N E X T F L O W  ~  version 24.10.3
+Jun-24 17:59:59.140 [main] DEBUG nextflow.plugin.PluginsFacade - Setting up plugin manager > mode=prod; embedded=false; plugins-dir=/users/rg/baygun/.nextflow/plugins; core-plugins: nf-amazon@2.9.2,nf-azure@1.10.2,nf-cloudcache@0.4.2,nf-codecommit@0.2.2,nf-console@1.1.4,nf-google@1.15.3,nf-tower@1.9.3,nf-wave@1.7.4
+Jun-24 17:59:59.190 [main] INFO  o.pf4j.DefaultPluginStatusProvider - Enabled plugins: []
+Jun-24 17:59:59.191 [main] INFO  o.pf4j.DefaultPluginStatusProvider - Disabled plugins: []
+Jun-24 17:59:59.193 [main] INFO  org.pf4j.DefaultPluginManager - PF4J version 3.12.0 in 'deployment' mode
+Jun-24 17:59:59.205 [main] INFO  org.pf4j.AbstractPluginManager - No plugins
+Jun-24 17:59:59.258 [main] DEBUG nextflow.cli.CmdRun - Applied DSL=2 from script declaration
+Jun-24 17:59:59.288 [main] DEBUG nextflow.cli.CmdRun - Launching `main.nf` [romantic_tuckerman] DSL2 - revision: 3a8b044905
+Jun-24 17:59:59.290 [main] DEBUG nextflow.plugin.PluginsFacade - Plugins default=[]
+Jun-24 17:59:59.290 [main] DEBUG nextflow.plugin.PluginsFacade - Plugins resolved requirement=[]
+Jun-24 17:59:59.333 [main] DEBUG nextflow.Session - Session UUID: 5f9e5f7c-1aba-4b68-9ede-bbcd7fa10d1a
+Jun-24 17:59:59.333 [main] DEBUG nextflow.Session - Run name: romantic_tuckerman
+Jun-24 17:59:59.333 [main] DEBUG nextflow.Session - Executor pool size: 16
+Jun-24 17:59:59.339 [main] DEBUG nextflow.file.FilePorter - File porter settings maxRetries=3; maxTransfers=50; pollTimeout=null
+Jun-24 17:59:59.344 [main] DEBUG nextflow.util.ThreadPoolBuilder - Creating thread pool 'FileTransfer' minSize=10; maxSize=48; workQueue=LinkedBlockingQueue[10000]; allowCoreThreadTimeout=false
+Jun-24 17:59:59.383 [main] DEBUG nextflow.cli.CmdRun - 
+  Version: 24.10.3 build 5933
+  Created: 16-12-2024 15:34 UTC (16:34 CEST)
+  System: Linux 5.14.0-503.23.2.el9_5.x86_64
+  Runtime: Groovy 4.0.23 on OpenJDK 64-Bit Server VM 21.0.2+13-LTS
+  Encoding: UTF-8 (UTF-8)
+  Process: 2295222@login1 [10.21.100.5]
+  CPUs: 16 - Mem: 62.3 GB (3 GB) - Swap: 0 (0)
+Jun-24 17:59:59.445 [main] DEBUG nextflow.Session - Work-dir: /users/rg/baygun/BlaER_crg/long_read/nextflow/work [nfs]
+Jun-24 17:59:59.445 [main] DEBUG nextflow.Session - Script base path does not exist or is not a directory: /users/rg/baygun/BlaER_crg/long_read/nextflow/bin
+Jun-24 17:59:59.456 [main] DEBUG nextflow.executor.ExecutorFactory - Extension executors providers=[]
+Jun-24 17:59:59.464 [main] DEBUG nextflow.Session - Observer factory: DefaultObserverFactory
+Jun-24 17:59:59.488 [main] DEBUG nextflow.cache.CacheFactory - Using Nextflow cache factory: nextflow.cache.DefaultCacheFactory
+Jun-24 17:59:59.495 [main] DEBUG nextflow.util.CustomThreadPool - Creating default thread pool > poolSize: 17; maxThreads: 1000
+Jun-24 17:59:59.572 [main] DEBUG nextflow.Session - Session start
+Jun-24 18:00:00.043 [main] DEBUG nextflow.script.ScriptRunner - > Launching execution
+Jun-24 18:00:00.055 [main] DEBUG n.secret.LocalSecretsProvider - Secrets store: /users/rg/baygun/.nextflow/secrets/store.json
+Jun-24 18:00:00.063 [main] DEBUG nextflow.secret.SecretsLoader - Discovered secrets providers: [nextflow.secret.LocalSecretsProvider@67e25252] - activable => nextflow.secret.LocalSecretsProvider@67e25252
+Jun-24 18:00:00.162 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Jun-24 18:00:00.162 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Jun-24 18:00:00.167 [main] DEBUG nextflow.executor.Executor - [warm up] executor > local
+Jun-24 18:00:00.182 [main] DEBUG n.processor.LocalPollingMonitor - Creating local task monitor for executor 'local' > cpus=16; memory=62.3 GB; capacity=16; pollInterval=100ms; dumpInterval=5m
+Jun-24 18:00:00.184 [main] DEBUG n.processor.TaskPollingMonitor - >>> barrier register (monitor: local)
+Jun-24 18:00:00.254 [main] DEBUG nextflow.Session - Workflow process names [dsl2]: NanoPlot
+Jun-24 18:00:00.254 [main] DEBUG nextflow.Session - Igniting dataflow network (2)
+Jun-24 18:00:00.259 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > NanoPlot
+Jun-24 18:00:00.261 [main] DEBUG nextflow.script.ScriptRunner - Parsed script files:
+  Script_2e7a1f9d3322e072: /users/rg/baygun/BlaER_crg/long_read/nextflow/main.nf
+Jun-24 18:00:00.261 [main] DEBUG nextflow.script.ScriptRunner - > Awaiting termination 
+Jun-24 18:00:00.261 [main] DEBUG nextflow.Session - Session await
+Jun-24 18:00:00.262 [PathVisitor-1] DEBUG nextflow.file.PathVisitor - files for syntax: glob; folder: /users/rg/baygun/BlaER_crg/files/long_read_files/; pattern: *.bam; options: [:]
+Jun-24 18:00:00.694 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jun-24 18:00:00.709 [Task submitter] INFO  nextflow.Session - [e2/e85ef9] Submitted process > NanoPlot (4)
+Jun-24 18:00:00.728 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jun-24 18:00:00.729 [Task submitter] INFO  nextflow.Session - [98/47e146] Submitted process > NanoPlot (3)
+Jun-24 18:00:00.744 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jun-24 18:00:00.745 [Task submitter] INFO  nextflow.Session - [80/2bda97] Submitted process > NanoPlot (1)
+Jun-24 18:00:00.762 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jun-24 18:00:00.762 [Task submitter] INFO  nextflow.Session - [45/078505] Submitted process > NanoPlot (2)
