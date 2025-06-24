@@ -1,0 +1,107 @@
+no change     /users/rg/baygun/miniforge3/condabin/conda
+no change     /users/rg/baygun/miniforge3/bin/conda
+no change     /users/rg/baygun/miniforge3/bin/conda-env
+no change     /users/rg/baygun/miniforge3/bin/activate
+no change     /users/rg/baygun/miniforge3/bin/deactivate
+no change     /users/rg/baygun/miniforge3/etc/profile.d/conda.sh
+no change     /users/rg/baygun/miniforge3/etc/fish/conf.d/conda.fish
+no change     /users/rg/baygun/miniforge3/shell/condabin/Conda.psm1
+no change     /users/rg/baygun/miniforge3/shell/condabin/conda-hook.ps1
+no change     /users/rg/baygun/miniforge3/lib/python3.12/site-packages/xontrib/conda.xsh
+no change     /users/rg/baygun/miniforge3/etc/profile.d/conda.csh
+no change     /users/rg/baygun/.bashrc
+No action taken.
+
+ N E X T F L O W   ~  version 24.10.3
+
+Launching `main.nf` [cheeky_gauss] DSL2 - revision: 411f91b650
+
+[-        ] NanoPlot | 0 of 4
+
+executor >  local (4)
+[5e/0cf744] NanoPlot (1) | 0 of 4
+
+executor >  local (4)
+[5e/0cf744] NanoPlot (1) | 0 of 4
+ERROR ~ Error executing process > 'NanoPlot (2)'
+
+Caused by:
+  Process `NanoPlot (2)` terminated with an error exit status (2)
+
+
+Command executed:
+
+  mkdir -p "result_nanoplot/FAX02360_20240115_1630_e5122b92"
+  NanoPlot --ubam "FAX02360_20240115_1630_e5122b92.bam" -o result_nanoplot/FAX02360_20240115_1630_e5122b92 --N50 -threads 4
+
+Command exit status:
+  2
+
+Command output:
+  (empty)
+
+Command error:
+  usage: NanoPlot [-h] [-v] [-t THREADS] [--verbose] [--store] [--raw] [--huge]
+                  [-o OUTDIR] [--no_static] [-p PREFIX] [--tsv_stats]
+                  [--only-report] [--info_in_report] [--maxlength N]
+                  [--minlength N] [--drop_outliers] [--downsample N]
+                  [--loglength] [--percentqual] [--alength] [--minqual N]
+                  [--runtime_until N] [--readtype {1D,2D,1D2}] [--barcoded]
+                  [--no_supplementary] [-c COLOR] [-cm COLORMAP]
+                  [-f [{png,jpg,jpeg,webp,svg,pdf,eps,json} ...]]
+                  [--plots [{kde,hex,dot} ...]] [--legacy [{kde,dot,hex} ...]]
+                  [--listcolors] [--listcolormaps] [--no-N50] [--N50]
+                  [--title TITLE] [--font_scale FONT_SCALE] [--dpi DPI]
+                  [--hide_stats]
+                  (--fastq file [file ...] | --fasta file [file ...] | --fastq_rich file [file ...] | --fastq_minimal file [file ...] | --summary file [file ...] | --bam file [file ...] | --ubam file [file ...] | --cram file [file ...] | --pickle pickle | --feather file [file ...])
+  NanoPlot: error: argument -t/--threads: invalid int value: 'hreads'
+
+Work dir:
+  /users/rg/baygun/BlaER_crg/long_read/nextflow/work/ab/c9de6b4f9d56f24221852c267342ca
+
+Tip: you can replicate the issue by changing to the process work dir and entering the command `bash .command.run`
+
+ -- Check '.nextflow.log' file for details
+
+executor >  local (4)
+[ab/c9de6b] NanoPlot (2) | 4 of 4, failed: 4 ✘
+ERROR ~ Error executing process > 'NanoPlot (2)'
+
+Caused by:
+  Process `NanoPlot (2)` terminated with an error exit status (2)
+
+
+Command executed:
+
+  mkdir -p "result_nanoplot/FAX02360_20240115_1630_e5122b92"
+  NanoPlot --ubam "FAX02360_20240115_1630_e5122b92.bam" -o result_nanoplot/FAX02360_20240115_1630_e5122b92 --N50 -threads 4
+
+Command exit status:
+  2
+
+Command output:
+  (empty)
+
+Command error:
+  usage: NanoPlot [-h] [-v] [-t THREADS] [--verbose] [--store] [--raw] [--huge]
+                  [-o OUTDIR] [--no_static] [-p PREFIX] [--tsv_stats]
+                  [--only-report] [--info_in_report] [--maxlength N]
+                  [--minlength N] [--drop_outliers] [--downsample N]
+                  [--loglength] [--percentqual] [--alength] [--minqual N]
+                  [--runtime_until N] [--readtype {1D,2D,1D2}] [--barcoded]
+                  [--no_supplementary] [-c COLOR] [-cm COLORMAP]
+                  [-f [{png,jpg,jpeg,webp,svg,pdf,eps,json} ...]]
+                  [--plots [{kde,hex,dot} ...]] [--legacy [{kde,dot,hex} ...]]
+                  [--listcolors] [--listcolormaps] [--no-N50] [--N50]
+                  [--title TITLE] [--font_scale FONT_SCALE] [--dpi DPI]
+                  [--hide_stats]
+                  (--fastq file [file ...] | --fasta file [file ...] | --fastq_rich file [file ...] | --fastq_minimal file [file ...] | --summary file [file ...] | --bam file [file ...] | --ubam file [file ...] | --cram file [file ...] | --pickle pickle | --feather file [file ...])
+  NanoPlot: error: argument -t/--threads: invalid int value: 'hreads'
+
+Work dir:
+  /users/rg/baygun/BlaER_crg/long_read/nextflow/work/ab/c9de6b4f9d56f24221852c267342ca
+
+Tip: you can replicate the issue by changing to the process work dir and entering the command `bash .command.run`
+
+ -- Check '.nextflow.log' file for details
+
