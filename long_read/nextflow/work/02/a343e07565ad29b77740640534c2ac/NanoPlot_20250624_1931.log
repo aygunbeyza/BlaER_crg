@@ -1,0 +1,28 @@
+2025-06-24 19:31:18,331 NanoPlot 1.44.1 started with arguments Namespace(threads=4, verbose=False, store=False, raw=False, huge=False, outdir='.', no_static=False, prefix='', tsv_stats=False, only_report=False, info_in_report=False, maxlength=None, minlength=None, drop_outliers=False, downsample=None, loglength=False, percentqual=False, alength=False, minqual=None, runtime_until=None, readtype='1D', barcoded=False, no_supplementary=False, color='#4CB391', colormap='Greens', format=['png'], plots=['kde', 'dot'], legacy=None, listcolors=False, listcolormaps=False, no_N50=False, N50=True, title=None, font_scale=1, dpi=100, hide_stats=False, fastq=None, fasta=None, fastq_rich=None, fastq_minimal=None, summary=None, bam=None, ubam=['FAX02360_20240115_1630_e5122b92.bam'], cram=None, pickle=None, feather=None, path='./')
+2025-06-24 19:31:18,331 Python version is: 3.12.11 | packaged by conda-forge | (main, Jun  4 2025, 14:45:31) [GCC 13.3.0]
+2025-06-24 19:31:18,350 Nanoget: Starting to collect statistics from ubam file FAX02360_20240115_1630_e5122b92.bam.
+2025-06-24 19:33:09,057 Nanoget: No index for bam file could be found, created index.
+2025-06-24 19:40:31,559 Nanoget: ubam FAX02360_20240115_1630_e5122b92.bam contains 17013763 reads.
+2025-06-24 19:40:35,117 Reduced DataFrame memory usage from 1638.7845945358276Mb to 1638.7845945358276Mb
+2025-06-24 19:40:41,615 Nanoget: Gathered all metrics of 17013763 reads
+2025-06-24 19:40:54,886 Calculated statistics
+2025-06-24 19:40:54,888 Using sequenced read lengths for plotting.
+2025-06-24 19:40:55,561 Removed 4 artefactual reads with very short length and very high quality.
+2025-06-24 19:41:09,010 Calculated statistics
+2025-06-24 19:41:09,059 NanoPlot:  Valid color #4CB391.
+2025-06-24 19:41:09,059 NanoPlot:  Valid colormap Greens.
+2025-06-24 19:41:10,614 NanoPlot:  Creating length plots for Read length.
+2025-06-24 19:41:10,618 NanoPlot: Using 17013759 reads with read length N50 of 903bp and maximum of 355369bp.
+2025-06-24 19:41:11,392 Saved ./WeightedHistogramReadlength  as png (or png for --legacy)
+2025-06-24 19:41:12,077 Saved ./WeightedLogTransformed_HistogramReadlength  as png (or png for --legacy)
+2025-06-24 19:41:12,696 Saved ./Non_weightedHistogramReadlength  as png (or png for --legacy)
+2025-06-24 19:41:13,376 Saved ./Non_weightedLogTransformed_HistogramReadlength  as png (or png for --legacy)
+2025-06-24 19:41:13,378 NanoPlot: Creating yield by minimal length plot for Read length.
+2025-06-24 19:41:15,440 Saved ./Yield_By_Length  as png (or png for --legacy)
+2025-06-24 19:41:15,443 Created length plots
+2025-06-24 19:41:15,851 NanoPlot: Creating Read lengths vs Average read quality plots using 17013759 reads.
+2025-06-24 19:41:17,581 Saved ./LengthvsQualityScatterPlot_dot  as png (or png for --legacy)
+2025-06-24 19:41:18,098 Saved ./LengthvsQualityScatterPlot_kde  as png (or png for --legacy)
+2025-06-24 19:41:18,102 Created LengthvsQual plot
+2025-06-24 19:41:18,102 Writing html report.
+2025-06-24 19:41:18,118 Finished!
