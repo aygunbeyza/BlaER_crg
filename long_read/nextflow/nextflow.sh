@@ -13,6 +13,6 @@ conda init
 source ~/.bashrc
 conda activate qc3
 module load Nextflow/24.10.3
-nextflow run main.nf --outdir /users/rg/baygun/BlaER_crg/long_read/nextflow/result_nanoplot
+nextflow run main.nf
 
 conda deactivate
