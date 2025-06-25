@@ -8,3 +8,10 @@ long_read/epi2me
 **/*.err
 **/*.out
 
+long_read/nextflow/work/
+long_read/nextflow/.nextflow/
+long_read/nextflow/*.err
+long_read/nextflow/*.out
+long_read/nextflow/work/.nextflow.log*
+long_read/nextflow/.nextflow.log*
+
