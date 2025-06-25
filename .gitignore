@@ -2,10 +2,9 @@ files
 short_read/fastqc/result_fastqc
 ref
 long_read/epi2me
-long_read/nanoplot/result_nanoplot/
-/users/rg/baygun/BlaER_crg/long_read/nextflow/result_nanoplot
-/users/rg/baygun/BlaER_crg/long_read/nextflow/work/
-/users/rg/baygun/BlaER_crg/long_read/nextflow/*.err
-/users/rg/baygun/BlaER_crg/long_read/nextflow/*.out
-/users/rg/baygun/BlaER_crg/long_read/nextflow/work/.nextflow.log*
-/users/rg/baygun/BlaER_crg/long_read/nextflow/.nextflow
+**/result_nanoplot/
+**/work/
+**/.nextflow/
+**/*.err
+**/*.out
+
