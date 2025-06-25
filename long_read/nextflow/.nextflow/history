@@ -19,7 +19,7 @@
 2025-06-24 17:51:36	1.9s	gloomy_sammet	ERR	85c91d73ee6a64a4de738b971fc003c0	7e5436b9-ef98-4229-b934-c9b4d02e39de	nextflow run main.nf
 2025-06-24 17:55:10	2.3s	lonely_northcutt	ERR	7bb15d52b5d247934f7dedc69a15c2d6	63ef85df-7309-4ef4-858e-dd7ce1aa45d7	nextflow run main.nf
 2025-06-24 17:56:29	1.8s	goofy_lagrange	ERR	7bb15d52b5d247934f7dedc69a15c2d6	348e1117-1fbb-4e9e-8795-cc0d6a56f2b5	nextflow run main.nf
-2025-06-24 17:59:59	-	romantic_tuckerman	-	3a8b0449052b0cb0265b4922e29f8ae1	5f9e5f7c-1aba-4b68-9ede-bbcd7fa10d1a	nextflow run main.nf
+2025-06-24 17:59:59	4h 6m 32s	romantic_tuckerman	ERR	3a8b0449052b0cb0265b4922e29f8ae1	5f9e5f7c-1aba-4b68-9ede-bbcd7fa10d1a	nextflow run main.nf
 2025-06-24 18:01:29	17.2s	boring_gates	ERR	3a8b0449052b0cb0265b4922e29f8ae1	ffe58361-e9ca-43dd-a1a3-bbd80aae3dc1	nextflow run main.nf
 2025-06-24 18:28:21	2.2s	curious_almeida	ERR	f3235adf2252d0aa48aee0a920c1e420	e2be3f42-553a-490b-986c-f8cb3317b3bc	nextflow run main.nf
 2025-06-24 18:32:52	2.2s	tiny_fermat	ERR	982c432224f1b28dcc215754a1b29c5b	9dd6ebe3-f735-464f-b6d2-6d198b305d4e	nextflow run main.nf
