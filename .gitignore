@@ -13,9 +13,13 @@ long_read/nextflow/*.err
 long_read/nextflow/*.out
 long_read/nextflow/work/.nextflow.log*
 long_read/nextflow/.nextflow.log*
-long_read/epi2me/
-!long_read/epi2me/wf-human-variation/epi2me.sh
-!long_read/epi2me/refdata
+long_read/epi2me/conf_backup
+long_read/epi2me/results_epi2me
+long_read/epi2me/results_epi2me_120
+long_read/epi2me/test
+long_read/epi2me/wf-human-variation
+
+
 long_read/mop/
 long_read/sqanti/
 !long_read/sqanti/ref
