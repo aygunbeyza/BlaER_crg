@@ -28,5 +28,4 @@ for bam in "$IN_DIR"/*.bam; do
              --N50 \
              --threads 4
 done
-
 conda deactivate
