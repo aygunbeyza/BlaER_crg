@@ -6,12 +6,10 @@ long_read/epi2me/**/refdata/
 long_read/mop/
 
 # Ignore everything inside sqanti
-long_read/sqanti/**
-
-# But keep only this script
-!long_read/sqanti/SQANTI3/
-!long_read/sqanti/SQANTI3/sqanti.sh
-
+long_read/sqanti/SQANTI3/
+long_read/sqanti/ref/
+long_read/sqanti/results/
+long_read/sqanti/sqanti3/
 # Ignore concatemer results
 long_read/concatemer/result_concatemer/
 
