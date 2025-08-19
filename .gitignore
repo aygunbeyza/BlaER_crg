@@ -4,8 +4,13 @@ long_read/epi2me/**/refdata/
 
 # Ignore entire mop and sqanti, but keep some files in sqanti
 long_read/mop/
+
+# === SQANTI ===
+# Ignore everything under sqanti
 long_read/sqanti/**
-long_read/sqanti/ref/
+
+# But allow this specific script
+!long_read/sqanti/SQANTI3/
 !long_read/sqanti/SQANTI3/sqanti.sh
 
 # Ignore concatemer results
