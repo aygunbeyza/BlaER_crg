@@ -42,3 +42,9 @@ long_read/epi2me/refdata/
 long_read/epi2me/refdata/
 .RData
 .Rhistory
+
+# Ignore everything inside gffcompare
+gffcompare/**
+
+# But keep .sh scripts anywhere in gffcompare (root or subdirs)
+!gffcompare/**/gff_compare.sh
