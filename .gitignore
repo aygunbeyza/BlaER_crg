@@ -40,3 +40,5 @@ long_read/**/refdata/
 
 long_read/epi2me/refdata/
 long_read/epi2me/refdata/
+.RData
+.Rhistory
