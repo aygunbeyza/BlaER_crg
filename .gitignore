@@ -9,6 +9,8 @@ long_read/mop/
 long_read/sqanti/SQANTI3/
 long_read/sqanti/ref/
 long_read/sqanti/results/
+long_read/sqanti/.RData
+long_read/sqanti/.Rhistory
 long_read/sqanti/sqanti3/
 # Ignore concatemer results
 long_read/concatemer/result_concatemer/
