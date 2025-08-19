@@ -43,9 +43,7 @@ long_read/epi2me/refdata/
 .RData
 .Rhistory
 
-# Ignore everything in gff_compare
-long_read/gff_compare/**
-
-# Keep only gff_compare.sh
+# gff_compare klasöründe sadece gff_compare.sh kalsın
+long_read/gff_compare/*
 !long_read/gff_compare/gff_compare.sh
 
