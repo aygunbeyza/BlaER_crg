@@ -1,34 +1,35 @@
-files
-short_read/fastqc/result_fastqc
-ref
-**/result_nanoplot/
-**/work/
-**/.nextflow/
-**/*.err
-**/*.out
-**/work
-long_read/nextflow/work/
-long_read/nextflow/.nextflow/
-long_read/nextflow/*.err
-long_read/nextflow/*.out
-long_read/nextflow/work/.nextflow.log*
-long_read/nextflow/.nextflow.log*
-long_read/epi2me/conf_backup
-long_read/epi2me/results_epi2me
-long_read/epi2me/results_epi2me_120
-long_read/epi2me/test
-long_read/epi2me/wf-human-variation
-long_read/epi2me//refdata/
- long_read/epi2me/refdata
+# Ignore epi2me outputs
+long_read/epi2me/wf-human-variation/
+long_read/epi2me/**/refdata/
 
+# Ignore entire mop and sqanti, but keep some files in sqanti
 long_read/mop/
-long_read/sqanti/
-!long_read/sqanti/ref
+long_read/sqanti/**
+!long_read/sqanti/ref/
 !long_read/sqanti/sqanti.sh
-long_read/concatemer/result_concatemer
-long_read/tss/hg38.genome
-long_read/tss/intermediate_files
-long_read/tss/ispquant_result
-long_read/tss/lyric_result
-long_read/quantification/output
 
+# Ignore concatemer results
+long_read/concatemer/result_concatemer/
+
+# Ignore tss outputs
+long_read/tss/hg38.genome
+long_read/tss/intermediate_files/
+long_read/tss/ispquant_result/
+long_read/tss/lyric_result/
+
+# Ignore quantification output
+long_read/quantification/output/
+
+# Reference data (anywhere under long_read)
+long_read/**/refdata/
+
+# Large reference file types (global rule)
+*.fa
+*.fa.gz
+*.fasta
+*.fai
+*.gtf
+*.gff
+
+long_read/epi2me/refdata/
+long_read/epi2me/refdata/
