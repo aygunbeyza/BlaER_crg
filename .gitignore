@@ -4,6 +4,11 @@ long_read/epi2me/**/refdata/
 
 # Ignore entire mop and sqanti, but keep some files in sqanti
 long_read/mop/
+# IsoQuant altındakilerin hepsini ignore et
+long_read/IsoQuant/*
+
+# ama isoquant.sh dosyasını tut
+!long_read/IsoQuant/isoquant.sh
 
 # Ignore everything inside sqanti
 long_read/sqanti/SQANTI3/
