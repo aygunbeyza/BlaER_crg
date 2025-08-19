@@ -6,7 +6,7 @@ long_read/epi2me/**/refdata/
 long_read/mop/
 long_read/sqanti/**
 long_read/sqanti/ref/
-!long_read/sqanti/sqanti.sh
+!long_read/sqanti/SQANTI3/sqanti.sh
 
 # Ignore concatemer results
 long_read/concatemer/result_concatemer/
