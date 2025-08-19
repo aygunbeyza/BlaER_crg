@@ -5,7 +5,7 @@ long_read/epi2me/**/refdata/
 # Ignore entire mop and sqanti, but keep some files in sqanti
 long_read/mop/
 long_read/sqanti/**
-!long_read/sqanti/ref/
+long_read/sqanti/ref/
 !long_read/sqanti/sqanti.sh
 
 # Ignore concatemer results
@@ -30,6 +30,9 @@ long_read/**/refdata/
 *.fai
 *.gtf
 *.gff
+
+*.err
+*.out
 
 long_read/epi2me/refdata/
 long_read/epi2me/refdata/
