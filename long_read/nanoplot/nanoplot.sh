@@ -1,7 +1,7 @@
 #!/bin/bash
 #SBATCH --output=%x.%A_%a.out
 #SBATCH --error=%x.%A_%a.err
-#SBATCH --time=04:00:00
+#SBATCH --time=16:00:00
 #SBATCH --mem=32G
 #SBATCH --cpus-per-task=4
 #SBATCH --job-name=nanoplot_4
@@ -9,36 +9,24 @@
 #SBATCH --mail-type=FAIL
 
 conda init
+source ~/.bashrc
 conda activate qc3
-mkdir /users/rg/baygun/BlaER/long_read/nanoplot/result_nanoplot/FAX00264_20240115_1817_5ed29589
-mkdir /users/rg/baygun/BlaER/long_read/nanoplot/result_nanoplot/FAX00328_20240115_1815_946aeace
-mkdir /users/rg/baygun/BlaER/long_read/nanoplot/result_nanoplot/FAX02360_20240115_1630_e5122b92
-mkdir /users/rg/baygun/BlaER/long_read/nanoplot/result_nanoplot/FAX02366_20240115_1632_794829ec
 
-NanoPlot --ubam /users/rg/baygun/BlaER/files/long_read_files/FAX00264_20240115_1817_5ed29589.bam \
--o /users/rg/baygun/BlaER/long_read/nanoplot/result_nanoplot/FAX00264_20240115_1817_5ed29589 \
---N50 \
---threads 4
+IN_DIR="/users/rg/baygun/BlaER_crg/files/long_read_files/all_raw_bams"
+OUT_DIR="/users/rg/baygun/BlaER_crg/long_read/nanoplot/result_nanoplot"
 
-NanoPlot --ubam /users/rg/baygun/BlaER/files/long_read_files/FAX00328_20240115_1815_946aeace.bam \
--o /users/rg/baygun/BlaER/long_read/nanoplot/result_nanoplot/FAX00328_20240115_1815_946aeace \
---N50 \
---threads 4
+mkdir -p "$OUT_DIR"
 
-NanoPlot --ubam /users/rg/baygun/BlaER/files/long_read_files/FAX02360_20240115_1630_e5122b92.bam \
--o /users/rg/baygun/BlaER/long_read/nanoplot/result_nanoplot/FAX02360_20240115_1630_e5122b92 \
---N50 \
---threads 4
+# for all bam files
+for bam in "$IN_DIR"/*.bam; do
+    base=$(basename "$bam" .bam)
+    out="$OUT_DIR/$base"
+    mkdir -p "$out"
 
-NanoPlot --ubam /users/rg/baygun/BlaER/files/long_read_files/FAX02366_20240115_1632_794829ec.bam \
--o /users/rg/baygun/BlaER/long_read/nanoplot/result_nanoplot/FAX02366_20240115_1632_794829ec \
---N50 \
---threads 4
-
-
-
-
-
-
+    NanoPlot --ubam "$bam" \
+             -o "$out" \
+             --N50 \
+             --threads 4
+done
 
 conda deactivate
