@@ -1,3 +1,7 @@
+short_read/star/**
+!short_read/star/starsolo.sh
+!short_read/star/star_index.sh
+
 # Ignore epi2me outputs
 long_read/epi2me/wf-human-variation/
 long_read/epi2me/**/refdata/
