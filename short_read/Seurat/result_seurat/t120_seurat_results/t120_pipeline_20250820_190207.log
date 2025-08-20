@@ -1,0 +1,871 @@
+=== [t120] START ===
+Input: /users/rg/baygun/BlaER_crg/short_read/star/t120_Solo.out/Gene/filtered
+Output: /users/rg/baygun/BlaER_crg/short_read/star/result_seurat/t120_seurat_results
+Warning: Feature names cannot have underscores ('_'), replacing with dashes ('-')
+`vst.flavor` is set to 'v2' but could not find glmGamPoi installed.
+Please install the glmGamPoi package for much faster estimation.
+--------------------------------------------
+install.packages('BiocManager')
+BiocManager::install('glmGamPoi')
+--------------------------------------------
+Falling back to native (slower) implementation.
+
+PC_ 1 
+Positive:  HSP90AB1, C1QA, CD74, ALOX5AP, C1QC, RPSA, MS4A7, SPP1, RPS23, RPS2 
+	   RPS4X, RPL10, RPS5, SELENOP, CD9, MRC1, HLA-DRA, RPL18A, EEF1B2, RPL5 
+	   RPL12, LGMN, RPS27A, RPL6, RPL10A, LDHB, RPS3, MS4A4A, RPS28, RPS8 
+Negative:  S100A8, LYZ, NEAT1, MNDA, IL6ST, S100A9, SLPI, S100A6, ENSG00000257764, APOBEC3A 
+	   ADD3, S100A12, GPCPD1, RAB27A, PLAC8, SLC2A3, CDC42EP3, LUCAT1, CTSD, CFD 
+	   SLC44A1, S100A11, NDUFB9, CLEC12A, GK5, HGF, SRGN, SLC25A37, SELL, NAMPT 
+PC_ 2 
+Positive:  FTL, SELENOP, LGMN, CTSB, NEAT1, MS4A7, MARCO, F13A1, CXCL8, MARCKS 
+	   C1QA, MRC1, SOD2, MS4A4A, CD163, MAF, NAMPT, C1QC, CD14, SGK1 
+	   SPP1, NPC2, SAT1, FTH1, MAFB, TRIB1, FYB1, MS4A6A, DAB2, PPBP 
+Negative:  S100A8, S100A9, CD74, NKG7, HLA-DRA, RPS2, RPSA, RPS4X, HMGB2, RPS6 
+	   EEF1B2, RPS3, RPLP1, LDHB, RPS23, AGRP, ANXA1, RPL10A, GSTK1, RETN 
+	   S100A12, GSTP1, SLPI, RPS18, RPL18A, RPS5, RPL30, RPL32, RPS3A, RPS8 
+PC_ 3 
+Positive:  RPL12, RPS8, CTSS, RPL29, RPL39, RPL13, RPS18, RPL32, RPS3A, RPS12 
+	   RPL10, SNHG29, RPS23, RPS24, RPS4X, EEF1A1, LYZ, RPS2, F13A1, NRG1 
+	   RPS28, RPL30, RPS6, RPLP1, RPL7A, RPS13, RPL18A, RPS5, MT-ND2, GAS5 
+Negative:  STMN1, HMGB1, FABP5, TUBA1B, H2AZ1, HSP90AA1, SPP1, ACTB, HSP90AB1, MARCKS 
+	   PTMA, MAFB, TUBB, PRDX1, RAN, HNRNPM, SOX4, RETN, MARCKSL1, PDIA6 
+	   TUBB4B, CD9, CKAP4, SFPQ, AKAP12, SLC3A2, CLU, HMGB2, GPR84, HNRNPAB 
+PC_ 4 
+Positive:  NEAT1, TALAM1, SOX4, IGHM, VPREB1, TCL1A, DNTT, CD74, ZCCHC7, IRAG2 
+	   TCF4, CD79A, IL7R, TOP2B, HPS4, NPY, CD24, TASL, MALAT1, ARL4C 
+	   MZB1, EBF1, IRX2, GZMA, HLA-DRA, UGT3A2, TRAC, NEGR1, SELENOP, PARP1 
+Negative:  S100A8, S100A9, ACTB, S100A11, LGALS1, PFN1, S100A12, PTX3, S100A6, MARCKS 
+	   FCER1G, S100A4, C1QA, TSPO, RETN, MAFB, SERPINA1, SLPI, SOD2, MS4A7 
+	   MARCO, FTH1, CCL2, CSTB, ENSG00000295857, MYL6, C1QC, EIF4EBP1, FEZ1, LYN 
+PC_ 5 
+Positive:  FN1, SLC5A3, TNFSF15, BACH1, SPP1, MIR99AHG, DUSP6, PTX3, TIMP1, CXCL8 
+	   CD36, SQLE, MAFB, SH3GLB1, SLC4A7, BNIP3, MEF2C, SLC2A3, TPI1, SPRED1 
+	   ACSL4, DDX21, RHOC, RESF1, TALAM1, MARCKSL1, RBPJ, TPM3, ARMT1, NRG1 
+Negative:  FTL, ASAH1, HGF, LGMN, SERPINB1, MS4A7, SLPI, CTSS, SELENOP, SRGN 
+	   CTSB, TMSB4X, MRC1, C1QA, MS4A4A, CLEC4D, HMGB2, LYZ, CXCR4, GRN 
+	   RFLNB, NPC2, CTSH, C1QC, PSAP, EMP2, VNN2, CD9, CFD, ENSG00000257764 
+19:03:06 UMAP embedding parameters a = 0.9922 b = 1.112
+19:03:06 Read 1275 rows and found 15 numeric columns
+19:03:06 Using Annoy for neighbor search, n_neighbors = 30
+19:03:06 Building Annoy index with metric = cosine, n_trees = 50
+0%   10   20   30   40   50   60   70   80   90   100%
+[----|----|----|----|----|----|----|----|----|----|
+**************************************************|
+19:03:06 Writing NN index file to temp file /tmp/16384156/RtmpryAsSq/fileeb6421bb5a576
+19:03:06 Searching Annoy index using 1 thread, search_k = 3000
+19:03:07 Annoy recall = 100%
+19:03:07 Commencing smooth kNN distance calibration using 1 thread with target n_neighbors = 30
+19:03:07 Initializing from normalized Laplacian + noise (using RSpectra)
+19:03:07 Commencing optimization for 500 epochs, with 49442 positive edges
+19:03:07 Using rng type: pcg
+Using method 'umap'
+0%   10   20   30   40   50   60   70   80   90   100%
+[----|----|----|----|----|----|----|----|----|----|
+**************************************************|
+19:03:09 Optimization finished
+Computing nearest neighbor graph
+Computing SNN
+Modularity Optimizer version 1.3.0 by Ludo Waltman and Nees Jan van Eck
+
+Number of nodes: 1275
+Number of edges: 46558
+
+Running Louvain algorithm...
+0%   10   20   30   40   50   60   70   80   90   100%
+[----|----|----|----|----|----|----|----|----|----|
+**************************************************|
+Maximum modularity in 10 random starts: 0.7857
+Number of communities: 3
+Elapsed time: 0 seconds
+When using repel, set xnudge and ynudge to 0 for optimal results
+Centering and scaling data matrix
+  |                                                                              |                                                                      |   0%  |                                                                              |=======================                                               |  33%  |                                                                              |===============================================                       |  67%  |                                                                              |======================================================================| 100%
+[1] "Creating artificial doublets for pN = 5%"
+[1] "Creating Seurat object..."
+[1] "Running SCTransform..."
+Running SCTransform on assay: RNA
+Running SCTransform on layer: counts
+vst.flavor='v2' set. Using model with fixed slope and excluding poisson genes.
+`vst.flavor` is set to 'v2' but could not find glmGamPoi installed.
+Please install the glmGamPoi package for much faster estimation.
+--------------------------------------------
+install.packages('BiocManager')
+BiocManager::install('glmGamPoi')
+--------------------------------------------
+Falling back to native (slower) implementation.
+
+Variance stabilizing transformation of count matrix of size 17757 by 1342
+Model formula is y ~ log_umi
+Get Negative Binomial regression parameters per gene
+Using 2000 genes, 1342 cells
+Found 21 outliers - those will be ignored in fitting/regularization step
+
+Second step: Get residuals using fitted parameters for 17757 genes
+Computing corrected count matrix for 17757 genes
+Calculating gene attributes
+Wall clock passed: Time difference of 59.78887 secs
+Determine variable features
+Centering data matrix
+  |                                                                              |                                                                      |   0%  |                                                                              |==================                                                    |  25%  |                                                                              |===================================                                   |  50%  |                                                                              |====================================================                  |  75%  |                                                                              |======================================================================| 100%
+Set default assay to SCT
+[1] "Running PCA..."
+PC_ 1 
+Positive:  S100A8, LYZ, NEAT1, MNDA, IL6ST, S100A6, SLPI, S100A9, APOBEC3A, ADD3 
+	   ENSG00000257764, SLC2A3, GPCPD1, PLAC8, RAB27A, S100A12, LUCAT1, CTSD, CDC42EP3, SLC44A1 
+	   S100A11, NAMPT, CFD, CLEC12A, NDUFB9, GK5, CD55, RNASE1, CD300E, MALAT1 
+Negative:  HSP90AB1, CD74, RPSA, C1QA, ALOX5AP, C1QC, RPS2, RPS23, MS4A7, HLA-DRA 
+	   RPS4X, RPS5, RPL10, SPP1, EEF1B2, RPL18A, RPL5, RPL10A, RPS27A, RPL12 
+	   LDHB, RPL6, CD9, RPS3, MRC1, RPS6, RPS8, RPL30, RPLP1, RPS28 
+PC_ 2 
+Positive:  S100A8, S100A9, CD74, NKG7, HMGB2, HLA-DRA, SLPI, ANXA1, S100A12, RPS2 
+	   RETN, AGRP, GSTK1, RPS4X, RPS6, LDHB, RPSA, LYZ, EEF1B2, GSTP1 
+	   RPS3, RPLP1, CFD, RPL10A, RPS23, HGF, CCND3, ENSG00000257764, RPS18, STMN1 
+Negative:  SELENOP, LGMN, FTL, CTSB, MS4A7, MARCO, F13A1, MARCKS, NEAT1, C1QA 
+	   CXCL8, MRC1, SOD2, MS4A4A, C1QC, MAF, CD163, SPP1, CD14, SGK1 
+	   NAMPT, NPC2, SAT1, FTH1, MAFB, PPBP, TRIB1, MS4A6A, CCL3, FYB1 
+PC_ 3 
+Positive:  STMN1, FABP5, HMGB1, TUBA1B, H2AZ1, HSP90AA1, ACTB, SPP1, MARCKS, MAFB 
+	   HSP90AB1, RETN, RAN, PRDX1, PTMA, TUBB, HNRNPM, TUBB4B, PDIA6, GPR84 
+	   CKAP4, SOX4, CLU, SLC3A2, S100A12, SFPQ, MARCKSL1, SGK1, CD9, PFN1 
+Negative:  RPL12, RPS8, CTSS, RPL29, RPL39, RPL13, RPS18, RPS3A, RPL32, RPS12 
+	   RPL10, SNHG29, RPS23, F13A1, RPS24, RPS4X, NRG1, EEF1A1, RPS2, RPS28 
+	   SELENOP, RPS6, RPL30, RPLP1, LYZ, MT-ND2, GAS5, RPL7A, RPS13, RPL18A 
+PC_ 4 
+Positive:  NEAT1, TALAM1, SOX4, IGHM, VPREB1, TCL1A, CD74, ZCCHC7, DNTT, CD79A 
+	   IL7R, IRAG2, TOP2B, HPS4, TCF4, NPY, CD24, EBF1, NEGR1, TASL 
+	   ARL4C, STMN1, IGHD, PARP1, MZB1, CD19, IRX2, MARCKSL1, MALAT1, UGT3A2 
+Negative:  S100A8, S100A9, ACTB, LGALS1, S100A11, PFN1, S100A6, S100A12, PTX3, MARCKS 
+	   FCER1G, S100A4, C1QA, SLPI, TSPO, MS4A7, SERPINA1, RETN, C1QC, MARCO 
+	   CCL2, SOD2, CSTB, FTH1, TMSB4X, ENSG00000295857, FEZ1, SRGN, MYL6, MAFB 
+PC_ 5 
+Positive:  FN1, SLC5A3, TNFSF15, SPP1, BACH1, MIR99AHG, SQLE, DUSP6, CD36, PTX3 
+	   MAFB, CXCL8, SH3GLB1, TIMP1, SLC4A7, BNIP3, SPRED1, ACSL4, ARMT1, SLC2A3 
+	   DDX21, MEF2C, TPI1, TPM3, RHOC, RBPJ, RESF1, SLC7A5, EIF4EBP1, MXD1 
+Negative:  FTL, ASAH1, HGF, LGMN, SERPINB1, SLPI, MS4A7, SELENOP, CTSS, CTSB 
+	   SRGN, TMSB4X, MRC1, MS4A4A, C1QA, CLEC4D, CD9, LYZ, CXCR4, HMGB2 
+	   GRN, CTSH, PSAP, NPC2, VNN2, ENSG00000257764, EMP2, RFLNB, ARL4C, CFD 
+[1] "Calculating PC distance matrix..."
+[1] "Defining neighborhoods..."
+[1] "Computing pANN across all pK..."
+[1] "pK = 0.01..."
+[1] "pK = 0.02..."
+[1] "pK = 0.03..."
+[1] "pK = 0.04..."
+[1] "pK = 0.05..."
+[1] "pK = 0.06..."
+[1] "pK = 0.07..."
+[1] "pK = 0.08..."
+[1] "pK = 0.09..."
+[1] "pK = 0.1..."
+[1] "pK = 0.11..."
+[1] "pK = 0.12..."
+[1] "pK = 0.13..."
+[1] "pK = 0.14..."
+[1] "pK = 0.15..."
+[1] "pK = 0.16..."
+[1] "pK = 0.17..."
+[1] "pK = 0.18..."
+[1] "pK = 0.19..."
+[1] "pK = 0.2..."
+[1] "pK = 0.21..."
+[1] "pK = 0.22..."
+[1] "pK = 0.23..."
+[1] "pK = 0.24..."
+[1] "pK = 0.25..."
+[1] "pK = 0.26..."
+[1] "pK = 0.27..."
+[1] "pK = 0.28..."
+[1] "pK = 0.29..."
+[1] "pK = 0.3..."
+[1] "Creating artificial doublets for pN = 10%"
+[1] "Creating Seurat object..."
+[1] "Running SCTransform..."
+Running SCTransform on assay: RNA
+Running SCTransform on layer: counts
+vst.flavor='v2' set. Using model with fixed slope and excluding poisson genes.
+`vst.flavor` is set to 'v2' but could not find glmGamPoi installed.
+Please install the glmGamPoi package for much faster estimation.
+--------------------------------------------
+install.packages('BiocManager')
+BiocManager::install('glmGamPoi')
+--------------------------------------------
+Falling back to native (slower) implementation.
+
+Variance stabilizing transformation of count matrix of size 18124 by 1417
+Model formula is y ~ log_umi
+Get Negative Binomial regression parameters per gene
+Using 2000 genes, 1417 cells
+Found 39 outliers - those will be ignored in fitting/regularization step
+
+Second step: Get residuals using fitted parameters for 18124 genes
+Computing corrected count matrix for 18124 genes
+Calculating gene attributes
+Wall clock passed: Time difference of 1.07993 mins
+Determine variable features
+Centering data matrix
+  |                                                                              |                                                                      |   0%  |                                                                              |==================                                                    |  25%  |                                                                              |===================================                                   |  50%  |                                                                              |====================================================                  |  75%  |                                                                              |======================================================================| 100%
+Set default assay to SCT
+[1] "Running PCA..."
+PC_ 1 
+Positive:  S100A8, LYZ, NEAT1, IL6ST, MNDA, S100A9, SLPI, S100A6, ENSG00000257764, ADD3 
+	   APOBEC3A, PLAC8, S100A12, GPCPD1, RAB27A, LUCAT1, SLC2A3, SLC44A1, CDC42EP3, CFD 
+	   CTSD, S100A11, HGF, GK5, NDUFB9, CLEC12A, SLC25A37, SELL, SRGN, RNASE1 
+Negative:  HSP90AB1, C1QA, C1QC, MS4A7, CD74, RPSA, ALOX5AP, SPP1, MRC1, SELENOP 
+	   LGMN, RPS23, RPS2, CD9, RPS4X, RPL10, RPS5, HLA-DRA, RPL5, MS4A4A 
+	   RPL18A, EEF1B2, RPL12, MARCO, RPL6, RPS27A, LIPA, RPL10A, LDHB, MARCKS 
+PC_ 2 
+Positive:  SELENOP, LGMN, CTSB, FTL, NEAT1, MS4A7, MARCO, F13A1, CXCL8, MARCKS 
+	   MRC1, MS4A4A, CD163, SOD2, NAMPT, C1QA, MAF, CD14, SGK1, C1QC 
+	   SPP1, NPC2, SAT1, MAFB, FTH1, PPBP, TRIB1, FYB1, CSTB, CCL3 
+Negative:  S100A8, CD74, S100A9, HLA-DRA, NKG7, RPS2, RPSA, RPS4X, HMGB2, RPS6 
+	   LDHB, EEF1B2, RPS3, RPLP1, AGRP, RPS23, RPL10A, ANXA1, RETN, GSTK1 
+	   SLPI, GSTP1, RPL18A, RPS18, RPS5, RPL30, S100A12, STMN1, RPL32, RPS3A 
+PC_ 3 
+Positive:  RPL12, RPS8, RPL29, CTSS, RPL39, RPL13, RPS18, RPL32, RPS3A, RPS12 
+	   RPS23, RPL10, RPS24, SNHG29, RPS4X, RPS2, EEF1A1, F13A1, RPS28, RPS6 
+	   RPL30, LYZ, RPLP1, NRG1, RPL7A, RPS13, RPL18A, MT-ND2, RPS5, RPS3 
+Negative:  STMN1, HMGB1, FABP5, TUBA1B, H2AZ1, HSP90AA1, SPP1, ACTB, MARCKS, HSP90AB1 
+	   SOX4, PRDX1, TUBB, MAFB, CD9, PTMA, HNRNPM, MARCKSL1, RETN, TUBB4B 
+	   HMGB2, PDIA6, AKAP12, CKAP4, RAN, MKI67, SFPQ, SLC3A2, SGK1, S100A12 
+PC_ 4 
+Positive:  S100A8, S100A9, ACTB, S100A11, LGALS1, PFN1, S100A6, S100A12, MARCKS, PTX3 
+	   FCER1G, SLPI, S100A4, RETN, TSPO, C1QA, SOD2, MS4A7, SERPINA1, CCL2 
+	   MARCO, CSTB, SRGN, C1QC, FTH1, MAFB, FEZ1, CYBA, ENSG00000295857, TMSB4X 
+Negative:  NEAT1, TALAM1, SOX4, IGHM, VPREB1, TCL1A, DNTT, CD74, ZCCHC7, CD79A 
+	   IRAG2, IL7R, TCF4, NPY, TOP2B, CD24, ARL4C, HPS4, MZB1, NEGR1 
+	   GZMA, EBF1, HLA-DRA, TASL, TRAC, MALAT1, IRX2, UGT3A2, IGHD, PARP1 
+PC_ 5 
+Positive:  FN1, TNFSF15, SLC5A3, SPP1, BACH1, PTX3, SQLE, DUSP6, TIMP1, MIR99AHG 
+	   MAFB, CXCL8, SH3GLB1, CD36, SLC4A7, MEF2C, BNIP3, DDX21, TPM3, SPRED1 
+	   TPI1, SLC2A3, RESF1, ACSL4, TALAM1, RHOC, ARMT1, SLC7A5, RBPJ, MARCKSL1 
+Negative:  FTL, ASAH1, LGMN, HGF, SELENOP, SLPI, MS4A7, SERPINB1, CTSS, CTSB 
+	   SRGN, MRC1, MS4A4A, TMSB4X, CLEC4D, CXCR4, HMGB2, C1QA, LYZ, GRN 
+	   NPC2, CD9, ARL4C, CTSH, EMP2, PSAP, H1-10, LGALS3, CFD, VNN2 
+[1] "Calculating PC distance matrix..."
+[1] "Defining neighborhoods..."
+[1] "Computing pANN across all pK..."
+[1] "pK = 0.01..."
+[1] "pK = 0.02..."
+[1] "pK = 0.03..."
+[1] "pK = 0.04..."
+[1] "pK = 0.05..."
+[1] "pK = 0.06..."
+[1] "pK = 0.07..."
+[1] "pK = 0.08..."
+[1] "pK = 0.09..."
+[1] "pK = 0.1..."
+[1] "pK = 0.11..."
+[1] "pK = 0.12..."
+[1] "pK = 0.13..."
+[1] "pK = 0.14..."
+[1] "pK = 0.15..."
+[1] "pK = 0.16..."
+[1] "pK = 0.17..."
+[1] "pK = 0.18..."
+[1] "pK = 0.19..."
+[1] "pK = 0.2..."
+[1] "pK = 0.21..."
+[1] "pK = 0.22..."
+[1] "pK = 0.23..."
+[1] "pK = 0.24..."
+[1] "pK = 0.25..."
+[1] "pK = 0.26..."
+[1] "pK = 0.27..."
+[1] "pK = 0.28..."
+[1] "pK = 0.29..."
+[1] "pK = 0.3..."
+[1] "Creating artificial doublets for pN = 15%"
+[1] "Creating Seurat object..."
+[1] "Running SCTransform..."
+Running SCTransform on assay: RNA
+Running SCTransform on layer: counts
+vst.flavor='v2' set. Using model with fixed slope and excluding poisson genes.
+`vst.flavor` is set to 'v2' but could not find glmGamPoi installed.
+Please install the glmGamPoi package for much faster estimation.
+--------------------------------------------
+install.packages('BiocManager')
+BiocManager::install('glmGamPoi')
+--------------------------------------------
+Falling back to native (slower) implementation.
+
+Variance stabilizing transformation of count matrix of size 18473 by 1500
+Model formula is y ~ log_umi
+Get Negative Binomial regression parameters per gene
+Using 2000 genes, 1500 cells
+Found 54 outliers - those will be ignored in fitting/regularization step
+
+Second step: Get residuals using fitted parameters for 18473 genes
+Computing corrected count matrix for 18473 genes
+Calculating gene attributes
+Wall clock passed: Time difference of 1.116289 mins
+Determine variable features
+Centering data matrix
+  |                                                                              |                                                                      |   0%  |                                                                              |==================                                                    |  25%  |                                                                              |===================================                                   |  50%  |                                                                              |====================================================                  |  75%  |                                                                              |======================================================================| 100%
+Set default assay to SCT
+[1] "Running PCA..."
+PC_ 1 
+Positive:  S100A8, LYZ, NEAT1, MNDA, IL6ST, S100A6, SLPI, PLAC8, ADD3, APOBEC3A 
+	   ENSG00000257764, S100A9, SLC2A3, GPCPD1, LUCAT1, S100A12, RAB27A, NAMPT, SLC44A1, CTSD 
+	   CDC42EP3, S100A11, CLEC12A, CFD, GK5, MALAT1, RNASE1, CD55, CD300E, NDUFB9 
+Negative:  HSP90AB1, CD74, RPSA, ALOX5AP, C1QA, C1QC, RPS23, RPS2, MS4A7, RPS4X 
+	   SPP1, RPS5, RPL10, HLA-DRA, RPL18A, EEF1B2, RPL5, RPL12, RPS27A, RPL6 
+	   RPL10A, LDHB, CD9, RPS3, MRC1, RPS6, RPL30, RPS8, RPLP1, RPL11 
+PC_ 2 
+Positive:  S100A8, S100A9, CD74, NKG7, SLPI, HMGB2, ANXA1, S100A12, RETN, HLA-DRA 
+	   AGRP, RPS2, LYZ, RPS4X, RPS6, GSTK1, RPLP1, RPS3, EEF1B2, RPSA 
+	   CFD, LDHB, RPS23, RPL10A, GSTP1, ENSG00000257764, HGF, RPS18, RPL18A, CCND3 
+Negative:  LGMN, SELENOP, FTL, CTSB, MS4A7, MARCO, F13A1, MARCKS, MRC1, CXCL8 
+	   NEAT1, MS4A4A, C1QA, C1QC, SPP1, SOD2, CD14, SGK1, MAF, CD163 
+	   NPC2, NAMPT, SAT1, PPBP, FTH1, CCL3, MAFB, FYB1, CTSC, MS4A6A 
+PC_ 3 
+Positive:  RPL12, RPS8, CTSS, RPL34, RPL29, RPS18, RPL39, RPL13, RPL32, RPS3A 
+	   RPS12, F13A1, SNHG29, RPL10, RPS24, RPS23, NRG1, RPS4X, RPS2, RPS6 
+	   RPS28, EEF1A1, MT-ND2, LYZ, RPL30, RPLP1, SELENOP, GAS5, RPL18A, RPS13 
+Negative:  STMN1, FABP5, HMGB1, TUBA1B, H2AZ1, ACTB, SPP1, MARCKS, HSP90AA1, RETN 
+	   HSP90AB1, PRDX1, MAFB, HNRNPM, TUBB4B, S100A12, PTMA, TUBB, RAN, GPR84 
+	   HMGB2, PDIA6, CKAP4, CLU, S100A8, PFN1, CD9, SLC3A2, IGFBP2, CCL3 
+PC_ 4 
+Positive:  NEAT1, SOX4, IGHM, TALAM1, VPREB1, TCL1A, DNTT, CD74, CD79A, IL7R 
+	   ZCCHC7, IRAG2, NPY, TCF4, CD24, TOP2B, ARL4C, HPS4, EBF1, NEGR1 
+	   GZMA, TASL, MZB1, STMN1, UGT3A2, PARP1, HLA-DRA, IGHD, TRAC, CD19 
+Negative:  S100A8, S100A9, ACTB, LGALS1, S100A11, S100A6, PFN1, PTX3, MARCKS, S100A12 
+	   S100A4, FCER1G, SLPI, MARCO, TSPO, C1QA, RETN, SOD2, SERPINA1, FEZ1 
+	   MS4A7, MAFB, ENSG00000295857, FTH1, C1QC, CCL2, SRGN, S100A10, ANXA1, VIM 
+PC_ 5 
+Positive:  FTL, LGMN, ASAH1, HGF, SLPI, SERPINB1, MS4A7, SELENOP, CTSS, CTSB 
+	   SRGN, TMSB4X, MS4A4A, MRC1, CLEC4D, HMGB2, LYZ, C1QA, CXCR4, GRN 
+	   CD9, S100A8, EMP2, NPC2, CTSH, VNN2, ENSG00000257764, CFD, RFLNB, PSAP 
+Negative:  FN1, SLC5A3, TNFSF15, CD36, BACH1, MIR99AHG, SPP1, SQLE, TIMP1, DUSP6 
+	   PTX3, MAFB, SH3GLB1, CXCL8, MEF2C, DDX21, SPRED1, BNIP3, SLC4A7, ARMT1 
+	   TPM3, NRG1, RBPJ, SLC2A3, ACSL4, TALAM1, SLC7A5, RESF1, TPI1, SFPQ 
+[1] "Calculating PC distance matrix..."
+[1] "Defining neighborhoods..."
+[1] "Computing pANN across all pK..."
+[1] "pK = 0.01..."
+[1] "pK = 0.02..."
+[1] "pK = 0.03..."
+[1] "pK = 0.04..."
+[1] "pK = 0.05..."
+[1] "pK = 0.06..."
+[1] "pK = 0.07..."
+[1] "pK = 0.08..."
+[1] "pK = 0.09..."
+[1] "pK = 0.1..."
+[1] "pK = 0.11..."
+[1] "pK = 0.12..."
+[1] "pK = 0.13..."
+[1] "pK = 0.14..."
+[1] "pK = 0.15..."
+[1] "pK = 0.16..."
+[1] "pK = 0.17..."
+[1] "pK = 0.18..."
+[1] "pK = 0.19..."
+[1] "pK = 0.2..."
+[1] "pK = 0.21..."
+[1] "pK = 0.22..."
+[1] "pK = 0.23..."
+[1] "pK = 0.24..."
+[1] "pK = 0.25..."
+[1] "pK = 0.26..."
+[1] "pK = 0.27..."
+[1] "pK = 0.28..."
+[1] "pK = 0.29..."
+[1] "pK = 0.3..."
+[1] "Creating artificial doublets for pN = 20%"
+[1] "Creating Seurat object..."
+[1] "Running SCTransform..."
+Running SCTransform on assay: RNA
+Running SCTransform on layer: counts
+vst.flavor='v2' set. Using model with fixed slope and excluding poisson genes.
+`vst.flavor` is set to 'v2' but could not find glmGamPoi installed.
+Please install the glmGamPoi package for much faster estimation.
+--------------------------------------------
+install.packages('BiocManager')
+BiocManager::install('glmGamPoi')
+--------------------------------------------
+Falling back to native (slower) implementation.
+
+Variance stabilizing transformation of count matrix of size 18894 by 1594
+Model formula is y ~ log_umi
+Get Negative Binomial regression parameters per gene
+Using 2000 genes, 1594 cells
+Found 94 outliers - those will be ignored in fitting/regularization step
+
+Second step: Get residuals using fitted parameters for 18894 genes
+Computing corrected count matrix for 18894 genes
+Calculating gene attributes
+Wall clock passed: Time difference of 1.199576 mins
+Determine variable features
+Centering data matrix
+  |                                                                              |                                                                      |   0%  |                                                                              |==================                                                    |  25%  |                                                                              |===================================                                   |  50%  |                                                                              |====================================================                  |  75%  |                                                                              |======================================================================| 100%
+Set default assay to SCT
+[1] "Running PCA..."
+PC_ 1 
+Positive:  HSP90AB1, CD74, RPSA, C1QA, ALOX5AP, C1QC, MS4A7, SPP1, RPS23, RPS2 
+	   RPS4X, RPS5, RPL10, HLA-DRA, RPL18A, EEF1B2, RPL5, RPL12, RPS27A, RPL6 
+	   MRC1, CD9, RPL10A, RPS3, LDHB, LGMN, RPS6, SELENOP, RPS28, RPL30 
+Negative:  S100A8, LYZ, NEAT1, MNDA, IL6ST, PLAC8, SLPI, S100A6, S100A9, ENSG00000257764 
+	   GPCPD1, ADD3, S100A12, APOBEC3A, LUCAT1, SLC2A3, RAB27A, SLC44A1, CTSD, CDC42EP3 
+	   S100A11, CFD, CLEC12A, NDUFB9, NAMPT, HGF, SLC25A37, GK5, SELL, RNASE1 
+PC_ 2 
+Positive:  LGMN, SELENOP, CTSB, FTL, MS4A7, MARCO, MARCKS, CXCL8, F13A1, MRC1 
+	   NEAT1, SPP1, MS4A4A, SOD2, C1QA, C1QC, CD14, SGK1, CD163, NAMPT 
+	   MAF, NPC2, CCL3, PPBP, SAT1, MAFB, CSTB, FTH1, TRIB1, FYB1 
+Negative:  S100A8, S100A9, CD74, NKG7, HMGB2, HLA-DRA, SLPI, AGRP, RPS2, ANXA1 
+	   S100A12, RETN, RPS4X, RPS6, RPSA, RPLP1, RPS3, GSTK1, EEF1B2, LDHB 
+	   GSTP1, RPS23, RPL10A, RPS18, CFD, LYZ, RPL30, STMN1, RPL18A, RPL32 
+PC_ 3 
+Positive:  STMN1, FABP5, TUBA1B, HMGB1, H2AZ1, ACTB, HSP90AA1, MARCKS, SPP1, RETN 
+	   HSP90AB1, MAFB, TUBB4B, S100A8, PRDX1, RAN, TUBB, HNRNPM, S100A12, PFN1 
+	   PTMA, CKAP4, SGK1, GPR84, HMGB2, CLU, MKI67, SLC3A2, TUBA1A, CCL2 
+Negative:  RPL12, CTSS, RPS8, RPL34, RPL29, RPS18, RPL39, RPL13, F13A1, RPS3A 
+	   RPL32, NRG1, RPS23, SNHG29, RPS24, RPS12, RPS4X, RPL10, SELENOP, RPS2 
+	   RPS28, RPS6, MT-ND2, RPL30, EEF1A1, RPLP1, RPS13, GAS5, RPL41, RPL7A 
+PC_ 4 
+Positive:  S100A8, S100A9, ACTB, LGALS1, S100A11, PFN1, S100A6, S100A12, MARCKS, SLPI 
+	   PTX3, S100A4, C1QA, FCER1G, MS4A7, TSPO, MARCO, C1QC, RETN, SRGN 
+	   FEZ1, ANXA2, SERPINA1, CCL2, TMSB4X, CSTB, ENSG00000295857, VIM, S100A10, UCP2 
+Negative:  NEAT1, SOX4, IGHM, TALAM1, VPREB1, DNTT, TCL1A, IL7R, CD79A, ZCCHC7 
+	   CD74, NPY, CD24, IRAG2, HPS4, TOP2B, MZB1, TCF4, STMN1, GZMA 
+	   NEGR1, EBF1, UGT3A2, ARL4C, TASL, PARP1, MARCKSL1, TRAC, IGHD, CD19 
+PC_ 5 
+Positive:  FTL, LGMN, ASAH1, SELENOP, HGF, CTSS, MS4A7, SLPI, SERPINB1, CTSB 
+	   SRGN, MRC1, MS4A4A, TMSB4X, CLEC4D, HMGB2, CXCR4, C1QA, GRN, CD9 
+	   LYZ, NPC2, VNN2, STMN1, CTSH, AZU1, ARL4C, ENSG00000257764, EMP2, CFD 
+Negative:  FN1, TNFSF15, SLC5A3, SPP1, TIMP1, PTX3, BACH1, SQLE, MAFB, CD36 
+	   CXCL8, MIR99AHG, SH3GLB1, DUSP6, BNIP3, MEF2C, DDX21, SPRED1, TPI1, TPM3 
+	   SLC4A7, SLC2A3, LDHA, RESF1, RHOC, ACSL4, SLC7A5, ARMT1, RBPJ, GARS1 
+[1] "Calculating PC distance matrix..."
+[1] "Defining neighborhoods..."
+[1] "Computing pANN across all pK..."
+[1] "pK = 0.01..."
+[1] "pK = 0.02..."
+[1] "pK = 0.03..."
+[1] "pK = 0.04..."
+[1] "pK = 0.05..."
+[1] "pK = 0.06..."
+[1] "pK = 0.07..."
+[1] "pK = 0.08..."
+[1] "pK = 0.09..."
+[1] "pK = 0.1..."
+[1] "pK = 0.11..."
+[1] "pK = 0.12..."
+[1] "pK = 0.13..."
+[1] "pK = 0.14..."
+[1] "pK = 0.15..."
+[1] "pK = 0.16..."
+[1] "pK = 0.17..."
+[1] "pK = 0.18..."
+[1] "pK = 0.19..."
+[1] "pK = 0.2..."
+[1] "pK = 0.21..."
+[1] "pK = 0.22..."
+[1] "pK = 0.23..."
+[1] "pK = 0.24..."
+[1] "pK = 0.25..."
+[1] "pK = 0.26..."
+[1] "pK = 0.27..."
+[1] "pK = 0.28..."
+[1] "pK = 0.29..."
+[1] "pK = 0.3..."
+[1] "Creating artificial doublets for pN = 25%"
+[1] "Creating Seurat object..."
+[1] "Running SCTransform..."
+Running SCTransform on assay: RNA
+Running SCTransform on layer: counts
+vst.flavor='v2' set. Using model with fixed slope and excluding poisson genes.
+`vst.flavor` is set to 'v2' but could not find glmGamPoi installed.
+Please install the glmGamPoi package for much faster estimation.
+--------------------------------------------
+install.packages('BiocManager')
+BiocManager::install('glmGamPoi')
+--------------------------------------------
+Falling back to native (slower) implementation.
+
+Variance stabilizing transformation of count matrix of size 19218 by 1700
+Model formula is y ~ log_umi
+Get Negative Binomial regression parameters per gene
+Using 2000 genes, 1700 cells
+Found 106 outliers - those will be ignored in fitting/regularization step
+
+Second step: Get residuals using fitted parameters for 19218 genes
+Computing corrected count matrix for 19218 genes
+Calculating gene attributes
+Wall clock passed: Time difference of 1.248598 mins
+Determine variable features
+Centering data matrix
+  |                                                                              |                                                                      |   0%  |                                                                              |==================                                                    |  25%  |                                                                              |===================================                                   |  50%  |                                                                              |====================================================                  |  75%  |                                                                              |======================================================================| 100%
+Set default assay to SCT
+[1] "Running PCA..."
+PC_ 1 
+Positive:  S100A8, NEAT1, LYZ, MNDA, IL6ST, S100A6, PLAC8, SLPI, S100A9, ADD3 
+	   ENSG00000257764, GPCPD1, APOBEC3A, SLC2A3, NAMPT, LUCAT1, CTSD, S100A12, RAB27A, SLC44A1 
+	   MALAT1, S100A11, RNASE1, CLEC12A, GK5, CDC42EP3, CD55, TALAM1, NDUFB9, CFD 
+Negative:  HSP90AB1, CD74, RPSA, ALOX5AP, C1QA, C1QC, RPS23, RPS2, RPS4X, RPL10 
+	   RPS5, SPP1, MS4A7, EEF1B2, RPL18A, HLA-DRA, RPL12, RPL5, RPS27A, RPL10A 
+	   RPL6, RPS3, RPS8, RPS6, RPLP1, RPL30, LDHB, RPS18, RPL11, RPS28 
+PC_ 2 
+Positive:  LGMN, SELENOP, FTL, MS4A7, CTSB, MARCO, MARCKS, F13A1, MRC1, CXCL8 
+	   C1QA, C1QC, SOD2, SPP1, MS4A4A, NEAT1, SGK1, CD14, CD163, NPC2 
+	   CCL3, MAF, FTH1, NAMPT, PPBP, SAT1, MAFB, CSTB, CTSC, FYB1 
+Negative:  S100A8, S100A9, CD74, NKG7, SLPI, HMGB2, LYZ, RETN, S100A12, ANXA1 
+	   AGRP, RPS2, RPS4X, RPS6, RPLP1, HLA-DRA, ENSG00000257764, RPS3, GSTK1, CFD 
+	   EEF1B2, HGF, RPSA, RPS23, RPL10A, GSTP1, LDHB, RPS18, SRGN, STMN1 
+PC_ 3 
+Positive:  RPL12, RPS8, RPS14, CTSS, RPL13, RPL29, RPL34, RPS18, RPL39, RPS12 
+	   RPL32, RPS3A, RPS24, RPL10, RPS23, F13A1, SNHG29, RPS15A, RPS4X, RPS28 
+	   RPS2, NRG1, RPS6, LYZ, MT-ND2, RPLP1, EEF1A1, RPL30, RPL26, RPL37A 
+Negative:  STMN1, HMGB1, FABP5, TUBA1B, H2AZ1, HSP90AA1, ACTB, SOX4, SPP1, HSP90AB1 
+	   PRDX1, PTMA, MARCKS, CD9, TUBB, TUBB4B, HMGB2, MARCKSL1, RETN, MKI67 
+	   HNRNPM, PDIA6, RAN, IGHM, B2M, AKAP12, PARP1, IL7R, CLU, XBP1 
+PC_ 4 
+Positive:  NEAT1, IGHM, SOX4, TALAM1, VPREB1, DNTT, TCL1A, CD74, IL7R, CD79A 
+	   NPY, ZCCHC7, IRAG2, CD24, MZB1, NEGR1, HPS4, GZMA, EBF1, TOP2B 
+	   TASL, TCF4, UGT3A2, IGHD, HLA-DRA, TRAC, CD19, ARL4C, IRX2, PLS3 
+Negative:  S100A8, S100A9, ACTB, S100A11, LGALS1, S100A12, S100A6, MARCKS, PFN1, PTX3 
+	   SLPI, RETN, FCER1G, TSPO, S100A4, SRGN, MARCO, SOD2, ANXA2, FTH1 
+	   MAFB, CCL2, C1QA, CSTB, SERPINA1, MS4A7, ANXA1, VIM, C1QC, ENO1 
+PC_ 5 
+Positive:  FN1, TNFSF15, SLC5A3, SPP1, TIMP1, PTX3, CD36, BACH1, BNIP3, MIR99AHG 
+	   SQLE, DUSP6, SH3GLB1, MAFB, TPI1, MEF2C, CXCL8, TPM3, LDHA, SPRED1 
+	   DDX21, SH3BGRL3, RHOC, S100A4, SLC2A3, MARCKSL1, SLC4A7, RESF1, ARMT1, ACSL4 
+Negative:  FTL, SELENOP, LGMN, ASAH1, HGF, CTSS, MS4A7, SLPI, SERPINB1, CTSB 
+	   MRC1, MS4A4A, SRGN, TMSB4X, CLEC4D, HMGB2, LYZ, NPC2, CXCR4, STMN1 
+	   C1QA, GRN, ENSG00000257764, ARL4C, VNN2, AZU1, CFD, EMP2, CD9, BEX3 
+[1] "Calculating PC distance matrix..."
+[1] "Defining neighborhoods..."
+[1] "Computing pANN across all pK..."
+[1] "pK = 0.01..."
+[1] "pK = 0.02..."
+[1] "pK = 0.03..."
+[1] "pK = 0.04..."
+[1] "pK = 0.05..."
+[1] "pK = 0.06..."
+[1] "pK = 0.07..."
+[1] "pK = 0.08..."
+[1] "pK = 0.09..."
+[1] "pK = 0.1..."
+[1] "pK = 0.11..."
+[1] "pK = 0.12..."
+[1] "pK = 0.13..."
+[1] "pK = 0.14..."
+[1] "pK = 0.15..."
+[1] "pK = 0.16..."
+[1] "pK = 0.17..."
+[1] "pK = 0.18..."
+[1] "pK = 0.19..."
+[1] "pK = 0.2..."
+[1] "pK = 0.21..."
+[1] "pK = 0.22..."
+[1] "pK = 0.23..."
+[1] "pK = 0.24..."
+[1] "pK = 0.25..."
+[1] "pK = 0.26..."
+[1] "pK = 0.27..."
+[1] "pK = 0.28..."
+[1] "pK = 0.29..."
+[1] "pK = 0.3..."
+[1] "Creating artificial doublets for pN = 30%"
+[1] "Creating Seurat object..."
+[1] "Running SCTransform..."
+Running SCTransform on assay: RNA
+Running SCTransform on layer: counts
+vst.flavor='v2' set. Using model with fixed slope and excluding poisson genes.
+`vst.flavor` is set to 'v2' but could not find glmGamPoi installed.
+Please install the glmGamPoi package for much faster estimation.
+--------------------------------------------
+install.packages('BiocManager')
+BiocManager::install('glmGamPoi')
+--------------------------------------------
+Falling back to native (slower) implementation.
+
+Variance stabilizing transformation of count matrix of size 19533 by 1821
+Model formula is y ~ log_umi
+Get Negative Binomial regression parameters per gene
+Using 2000 genes, 1821 cells
+Found 155 outliers - those will be ignored in fitting/regularization step
+
+Second step: Get residuals using fitted parameters for 19533 genes
+Computing corrected count matrix for 19533 genes
+Calculating gene attributes
+Wall clock passed: Time difference of 1.381066 mins
+Determine variable features
+Centering data matrix
+  |                                                                              |                                                                      |   0%  |                                                                              |==================                                                    |  25%  |                                                                              |===================================                                   |  50%  |                                                                              |====================================================                  |  75%  |                                                                              |======================================================================| 100%
+Set default assay to SCT
+[1] "Running PCA..."
+PC_ 1 
+Positive:  S100A8, NEAT1, LYZ, IL6ST, MNDA, S100A6, PLAC8, NAMPT, ADD3, SLPI 
+	   SLC2A3, GPCPD1, APOBEC3A, ENSG00000257764, LUCAT1, MALAT1, CTSD, SLC44A1, CD55, TALAM1 
+	   S100A9, RAB27A, S100A11, RNASE1, S100A12, CLEC12A, CD300E, NDUFB9, GK5, DUSP6 
+Negative:  CD74, HSP90AB1, RPSA, ALOX5AP, RPS23, RPS2, RPS4X, HLA-DRA, RPS5, EEF1B2 
+	   RPL18A, RPL10, RPL12, RPL5, RPS27A, RPL10A, RPS3, RPS6, RPLP1, C1QC 
+	   C1QA, RPS8, RPL6, RPL30, RPS18, LDHB, RPL11, SPP1, RPL7A, RPS3A 
+PC_ 2 
+Positive:  LGMN, SELENOP, MS4A7, FTL, CTSB, MARCO, MARCKS, MRC1, SPP1, F13A1 
+	   C1QC, C1QA, MS4A4A, CXCL8, CD14, SOD2, SGK1, CCL3, NPC2, CD163 
+	   NEAT1, MAF, PPBP, FTH1, SAT1, MAFB, NAMPT, CTSC, MSR1, CSTB 
+Negative:  S100A8, S100A9, SLPI, LYZ, S100A12, NKG7, HMGB2, CD74, RETN, ANXA1 
+	   ENSG00000257764, AGRP, HGF, CFD, SRGN, CDC42EP3, GSTK1, RPLP1, SELL, GSTP1 
+	   RPS2, RPS6, TMPO, RPS4X, RPS3, HLA-DRA, CCND3, EEF1B2, SLC25A37, STMN1 
+PC_ 3 
+Positive:  STMN1, HMGB1, TUBA1B, FABP5, H2AZ1, ACTB, HSP90AA1, SPP1, SOX4, RETN 
+	   MARCKS, PRDX1, HSP90AB1, HMGB2, MKI67, TUBB4B, TUBB, PTMA, CLU, PDIA6 
+	   CD9, IGFBP2, RAN, HNRNPM, B2M, IGHM, TPX2, MARCKSL1, GPR84, HLA-B 
+Negative:  RPL12, RPS8, RPS14, RPL29, RPL13, RPL39, RPL34, RPS18, CTSS, RPL32 
+	   RPS12, RPS3A, NRG1, RPL37, MT-ND2, RPL10, RPS24, RPS15A, RPS23, SNHG29 
+	   LYZ, RPS6, RPS28, RPLP1, RPS2, RPS4X, F13A1, EEF1A1, RPL30, MT-ND1 
+PC_ 4 
+Positive:  S100A8, S100A9, ACTB, S100A11, LGALS1, S100A12, PFN1, MARCKS, SLPI, S100A6 
+	   PTX3, FCER1G, RETN, TSPO, S100A4, SOD2, SRGN, MARCO, C1QA, SERPINA1 
+	   FTH1, CCL2, ANXA2, C1QC, ANXA1, MAFB, TMSB4X, CSTB, VIM, MS4A7 
+Negative:  NEAT1, IGHM, SOX4, VPREB1, DNTT, TCL1A, TALAM1, CD74, IL7R, CD79A 
+	   ZCCHC7, NPY, CD24, IRAG2, NEGR1, GZMA, MZB1, TOP2B, HPS4, EBF1 
+	   UGT3A2, TASL, IGHD, TCF4, HLA-DRA, TRAC, CD19, ARL4C, MARCKSL1, IRX2 
+PC_ 5 
+Positive:  SELENOP, FTL, LGMN, CTSS, ASAH1, HGF, SLPI, CTSB, MS4A7, SERPINB1 
+	   MRC1, MS4A4A, SRGN, HMGB2, TMSB4X, CLEC4D, LYZ, C1QA, NPC2, STMN1 
+	   ENSG00000257764, CXCR4, GRN, AZU1, TNFSF13B, VNN2, ARL4C, F13A1, BEX3, C1QC 
+Negative:  FN1, TNFSF15, SLC5A3, SPP1, TIMP1, MAFB, PTX3, SQLE, CXCL8, BNIP3 
+	   BACH1, SH3GLB1, MIR99AHG, CD36, TPI1, DUSP6, TPM3, LDHA, DDX21, SLC2A3 
+	   MEF2C, SH3BGRL3, MARCKSL1, RHOC, SPRED1, ACSL4, SLC7A5, S100A4, RESF1, SLC4A7 
+[1] "Calculating PC distance matrix..."
+[1] "Defining neighborhoods..."
+[1] "Computing pANN across all pK..."
+[1] "pK = 0.01..."
+[1] "pK = 0.02..."
+[1] "pK = 0.03..."
+[1] "pK = 0.04..."
+[1] "pK = 0.05..."
+[1] "pK = 0.06..."
+[1] "pK = 0.07..."
+[1] "pK = 0.08..."
+[1] "pK = 0.09..."
+[1] "pK = 0.1..."
+[1] "pK = 0.11..."
+[1] "pK = 0.12..."
+[1] "pK = 0.13..."
+[1] "pK = 0.14..."
+[1] "pK = 0.15..."
+[1] "pK = 0.16..."
+[1] "pK = 0.17..."
+[1] "pK = 0.18..."
+[1] "pK = 0.19..."
+[1] "pK = 0.2..."
+[1] "pK = 0.21..."
+[1] "pK = 0.22..."
+[1] "pK = 0.23..."
+[1] "pK = 0.24..."
+[1] "pK = 0.25..."
+[1] "pK = 0.26..."
+[1] "pK = 0.27..."
+[1] "pK = 0.28..."
+[1] "pK = 0.29..."
+[1] "pK = 0.3..."
+NULL
+Chosen pK_value = 0.1400
+nExp_poi = 108; nExp_poi.adj = 67; homotypic.prop = 0.378
+[1] "Creating 425 artificial doublets..."
+[1] "Creating Seurat object..."
+[1] "Running SCTransform..."
+Running SCTransform on assay: RNA
+Running SCTransform on layer: counts
+vst.flavor='v2' set. Using model with fixed slope and excluding poisson genes.
+`vst.flavor` is set to 'v2' but could not find glmGamPoi installed.
+Please install the glmGamPoi package for much faster estimation.
+--------------------------------------------
+install.packages('BiocManager')
+BiocManager::install('glmGamPoi')
+--------------------------------------------
+Falling back to native (slower) implementation.
+
+Variance stabilizing transformation of count matrix of size 19218 by 1700
+Model formula is y ~ log_umi
+Get Negative Binomial regression parameters per gene
+Using 2000 genes, 1700 cells
+Found 106 outliers - those will be ignored in fitting/regularization step
+
+Second step: Get residuals using fitted parameters for 19218 genes
+Computing corrected count matrix for 19218 genes
+Calculating gene attributes
+Wall clock passed: Time difference of 1.244947 mins
+Determine variable features
+Centering data matrix
+  |                                                                              |                                                                      |   0%  |                                                                              |==================                                                    |  25%  |                                                                              |===================================                                   |  50%  |                                                                              |====================================================                  |  75%  |                                                                              |======================================================================| 100%
+Set default assay to SCT
+[1] "Running PCA..."
+PC_ 1 
+Positive:  S100A8, NEAT1, LYZ, MNDA, IL6ST, S100A6, PLAC8, SLPI, S100A9, ADD3 
+	   ENSG00000257764, GPCPD1, APOBEC3A, SLC2A3, NAMPT, LUCAT1, CTSD, S100A12, RAB27A, SLC44A1 
+	   MALAT1, S100A11, RNASE1, CLEC12A, GK5, CDC42EP3, CD55, TALAM1, NDUFB9, CFD 
+Negative:  HSP90AB1, CD74, RPSA, ALOX5AP, C1QA, C1QC, RPS23, RPS2, RPS4X, RPL10 
+	   RPS5, SPP1, MS4A7, EEF1B2, RPL18A, HLA-DRA, RPL12, RPL5, RPS27A, RPL10A 
+	   RPL6, RPS3, RPS8, RPS6, RPLP1, RPL30, LDHB, RPS18, RPL11, RPS28 
+PC_ 2 
+Positive:  LGMN, SELENOP, FTL, MS4A7, CTSB, MARCO, MARCKS, F13A1, MRC1, CXCL8 
+	   C1QA, C1QC, SOD2, SPP1, MS4A4A, NEAT1, SGK1, CD14, CD163, NPC2 
+	   CCL3, MAF, FTH1, NAMPT, PPBP, SAT1, MAFB, CSTB, CTSC, FYB1 
+Negative:  S100A8, S100A9, CD74, NKG7, SLPI, HMGB2, LYZ, RETN, S100A12, ANXA1 
+	   AGRP, RPS2, RPS4X, RPS6, RPLP1, HLA-DRA, ENSG00000257764, RPS3, GSTK1, CFD 
+	   EEF1B2, HGF, RPSA, RPS23, RPL10A, GSTP1, LDHB, RPS18, SRGN, STMN1 
+PC_ 3 
+Positive:  RPL12, RPS8, RPS14, CTSS, RPL13, RPL29, RPL34, RPS18, RPL39, RPS12 
+	   RPL32, RPS3A, RPS24, RPL10, RPS23, F13A1, SNHG29, RPS15A, RPS4X, RPS28 
+	   RPS2, NRG1, RPS6, LYZ, MT-ND2, RPLP1, EEF1A1, RPL30, RPL26, RPL37A 
+Negative:  STMN1, HMGB1, FABP5, TUBA1B, H2AZ1, HSP90AA1, ACTB, SOX4, SPP1, HSP90AB1 
+	   PRDX1, PTMA, MARCKS, CD9, TUBB, TUBB4B, HMGB2, MARCKSL1, RETN, MKI67 
+	   HNRNPM, PDIA6, RAN, IGHM, B2M, AKAP12, PARP1, IL7R, CLU, XBP1 
+PC_ 4 
+Positive:  NEAT1, IGHM, SOX4, TALAM1, VPREB1, DNTT, TCL1A, CD74, IL7R, CD79A 
+	   NPY, ZCCHC7, IRAG2, CD24, MZB1, NEGR1, HPS4, GZMA, EBF1, TOP2B 
+	   TASL, TCF4, UGT3A2, IGHD, HLA-DRA, TRAC, CD19, ARL4C, IRX2, PLS3 
+Negative:  S100A8, S100A9, ACTB, S100A11, LGALS1, S100A12, S100A6, MARCKS, PFN1, PTX3 
+	   SLPI, RETN, FCER1G, TSPO, S100A4, SRGN, MARCO, SOD2, ANXA2, FTH1 
+	   MAFB, CCL2, C1QA, CSTB, SERPINA1, MS4A7, ANXA1, VIM, C1QC, ENO1 
+PC_ 5 
+Positive:  FN1, TNFSF15, SLC5A3, SPP1, TIMP1, PTX3, CD36, BACH1, BNIP3, MIR99AHG 
+	   SQLE, DUSP6, SH3GLB1, MAFB, TPI1, MEF2C, CXCL8, TPM3, LDHA, SPRED1 
+	   DDX21, SH3BGRL3, RHOC, S100A4, SLC2A3, MARCKSL1, SLC4A7, RESF1, ARMT1, ACSL4 
+Negative:  FTL, SELENOP, LGMN, ASAH1, HGF, CTSS, MS4A7, SLPI, SERPINB1, CTSB 
+	   MRC1, MS4A4A, SRGN, TMSB4X, CLEC4D, HMGB2, LYZ, NPC2, CXCR4, STMN1 
+	   C1QA, GRN, ENSG00000257764, ARL4C, VNN2, AZU1, CFD, EMP2, CD9, BEX3 
+[1] "Calculating PC distance matrix..."
+[1] "Computing pANN..."
+[1] "Classifying doublets.."
+PC_ 1 
+Positive:  RPSA, RPL6, HSP90AB1, RPL5, RPS27A, RPS23, RPL11, RPL18A, RPS4X, RPS5 
+	   RPS2, RPL10, RPS3, LDHB, RPL10A, RPS13, RPL7A, RPS28, RPLP0, EEF1B2 
+	   RPL30, RPS8, RPS6, RPS3A, RPLP1, RPS18, ALOX5AP, HSPD1, PTMA, RPL12 
+Negative:  LYZ, NEAT1, IL6ST, ADD3, MALAT1, S100A11, CLEC12A, S100A8, SDCBP, VMP1 
+	   RAB27A, DUSP6, CD55, RNASE1, CTSD, CEBPB, SLC2A3, EVI2B, MT-ND2, GPCPD1 
+	   MNDA, PGD, ENSG00000257764, APLP2, FOSL2, CD300E, LUCAT1, CCDC88A, APOBEC3A, NCF2 
+PC_ 2 
+Positive:  NPC2, CTSB, LGMN, FTH1, FTL, MAF, MS4A7, C1QC, C1QA, MS4A4A 
+	   SELENOP, MRC1, TRIB1, MARCO, MARCKS, MS4A6A, SNX6, F13A1, FYB1, CD14 
+	   CTSC, KLF6, SAT1, SGK1, TYROBP, CD163, DAB2, MAFB, NRP1, SOD2 
+Negative:  S100A8, HMGB2, CCND3, S100A9, NKG7, ANXA1, S100A12, RIPOR2, TMPO, GSTP1 
+	   CDC42EP3, HGF, SLC25A37, SLPI, MRPL33, METTL9, FAM107B, STMN1, TMEM71, SELL 
+	   CLEC4D, CFD, NFE2, SOX4, RETN, NLRC5, AKAP12, CLU, LYST, LMNB1 
+PC_ 3 
+Positive:  BIRC5, TPX2, GTSE1, MKI67, SHCBP1, CDK1, ACTB, KNL1, RRM2, NCAPG 
+	   CEP55, CCNA2, ASPM, KIF11, ANLN, CCNB2, UBE2C, CDKN3, ESCO2, PTTG1 
+	   TYMS, TPM3, CENPK, LMNB1, PCLAF, APOBEC3B, TUBA1B, FBXO5, TOP2A, CKAP4 
+Negative:  RPL29, EEF1A1, RPL12, RPL10, RPS3A, RPL39, RPS8, RPL7A, RPS13, RPL11 
+	   SNHG29, RPS24, RPS28, RPL32, RPS4X, RPS12, RPL30, RPL13, RPL18A, RPS27A 
+	   RPL6, RPS2, RPS23, RPS3, RPS5, RPS18, RPL5, RPLP1, RPS19, GAS5 
+PC_ 4 
+Positive:  IGHM, VPREB1, DNTT, TCL1A, CD79A, MZB1, IL7R, NPY, UGT3A2, NEGR1 
+	   IGHD, CD24, TRAC, GZMA, CFAP251, CD19, PLS3, AFF3, BLK, LINC01922 
+	   SOX4, XKR4, ERG, ZCCHC7, LEF1, ENSG00000287277, STMN1, PAX5, SPIB, IRAG2 
+Negative:  RPL13, S100A9, RPS8, RPS18, RPL39, RPL32, RPL29, RPS24, RPS12, RPL12 
+	   RPS23, RPS2, RPLP1, RPS6, RPL21, S100A4, RPL30, RPL7A, RPS3A, RPL18A 
+	   RPS4X, RPL27A, RPS13, RPS27A, EEF1B2, RPS3, LGALS1, RPS28, SNHG29, RPL10 
+PC_ 5 
+Positive:  RRM2, MKI67, PCLAF, TYMS, ESCO2, GTSE1, BIRC5, NCAPG, CDK1, UBE2C 
+	   CEP55, TK1, KNL1, H1-5, ASPM, ATAD2, CDKN3, SHCBP1, CDT1, TPX2 
+	   KIF11, CCNA2, ANLN, ZWINT, CCNB2, HMMR, HELLS, BRCA2, CDCA2, FBXO5 
+Negative:  SH3BGRL3, MARCKSL1, CD79A, GARS1, TPM3, DDX21, SYT1, SH3GLB1, RHOC, SLC5A3 
+	   CD19, PFN1, LY6E, TRIB2, ACTB, FFAR2, S100A4, SLC7A5, TIMP1, FRAT2 
+	   IGHD, TERF2, TNFSF15, NEGR1, BACH1, SFPQ, WDR43, DUSP6, CYBA, TCL1A 
+19:11:40 UMAP embedding parameters a = 0.9922 b = 1.112
+19:11:40 Read 1208 rows and found 15 numeric columns
+19:11:40 Using Annoy for neighbor search, n_neighbors = 30
+19:11:40 Building Annoy index with metric = cosine, n_trees = 50
+0%   10   20   30   40   50   60   70   80   90   100%
+[----|----|----|----|----|----|----|----|----|----|
+**************************************************|
+19:11:40 Writing NN index file to temp file /tmp/16384156/RtmpryAsSq/fileeb6424ac3251a
+19:11:40 Searching Annoy index using 1 thread, search_k = 3000
+19:11:40 Annoy recall = 100%
+19:11:40 Commencing smooth kNN distance calibration using 1 thread with target n_neighbors = 30
+19:11:41 Initializing from normalized Laplacian + noise (using RSpectra)
+19:11:41 Commencing optimization for 500 epochs, with 45768 positive edges
+19:11:41 Using rng type: pcg
+Using method 'umap'
+0%   10   20   30   40   50   60   70   80   90   100%
+[----|----|----|----|----|----|----|----|----|----|
+**************************************************|
+19:11:42 Optimization finished
+Computing nearest neighbor graph
+Computing SNN
+Modularity Optimizer version 1.3.0 by Ludo Waltman and Nees Jan van Eck
+
+Number of nodes: 1208
+Number of edges: 43399
+
+Running Louvain algorithm...
+0%   10   20   30   40   50   60   70   80   90   100%
+[----|----|----|----|----|----|----|----|----|----|
+**************************************************|
+Maximum modularity in 10 random starts: 0.7908
+Number of communities: 3
+Elapsed time: 0 seconds
+When using repel, set xnudge and ynudge to 0 for optimal results
+=== [t120] DONE ===
+
+--- SESSION INFO (END) ---
+R version 4.4.2 (2024-10-31)
+Platform: x86_64-pc-linux-gnu
+Running under: AlmaLinux 9.6 (Sage Margay)
+
+Matrix products: default
+BLAS/LAPACK: FlexiBLAS OPENBLAS;  LAPACK version 3.11.0
+
+locale:
+ [1] LC_CTYPE=en_US.UTF-8       LC_NUMERIC=C              
+ [3] LC_TIME=en_US.UTF-8        LC_COLLATE=en_US.UTF-8    
+ [5] LC_MONETARY=en_US.UTF-8    LC_MESSAGES=en_US.UTF-8   
+ [7] LC_PAPER=en_US.UTF-8       LC_NAME=C                 
+ [9] LC_ADDRESS=C               LC_TELEPHONE=C            
+[11] LC_MEASUREMENT=en_US.UTF-8 LC_IDENTIFICATION=C       
+
+time zone: Europe/Madrid
+tzcode source: system (glibc)
+
+attached base packages:
+[1] stats     graphics  grDevices utils     datasets  methods   base     
+
+other attached packages:
+[1] future_1.67.0       readr_2.1.5         dplyr_1.1.4        
+[4] ggplot2_3.5.2       DoubletFinder_2.0.6 Seurat_5.0.0       
+[7] SeuratObject_5.1.0  sp_2.2-0           
+
+loaded via a namespace (and not attached):
+  [1] deldir_2.0-4           pbapply_1.7-4          gridExtra_2.3         
+  [4] rlang_1.1.6            magrittr_2.0.3         RcppAnnoy_0.0.22      
+  [7] matrixStats_1.5.0      ggridges_0.5.6         compiler_4.4.2        
+ [10] spatstat.geom_3.5-0    systemfonts_1.1.0      maps_3.4.3            
+ [13] png_0.1-8              vctrs_0.6.5            reshape2_1.4.4        
+ [16] stringr_1.5.1          crayon_1.5.3           pkgconfig_2.0.3       
+ [19] fastmap_1.2.0          labeling_0.4.3         promises_1.3.3        
+ [22] tzdb_0.5.0             ragg_1.3.2             bit_4.6.0             
+ [25] purrr_1.1.0            jsonlite_2.0.0         goftest_1.2-3         
+ [28] later_1.4.3            spatstat.utils_3.1-5   irlba_2.3.5.1         
+ [31] parallel_4.4.2         cluster_2.1.8.1        R6_2.6.1              
+ [34] ica_1.0-3              stringi_1.8.7          RColorBrewer_1.1-3    
+ [37] spatstat.data_3.1-8    reticulate_1.43.0      parallelly_1.45.1     
+ [40] spatstat.univar_3.1-4  lmtest_0.9-40          scattermore_1.2       
+ [43] Rcpp_1.1.0             fields_16.3.1          tensor_1.5.1          
+ [46] future.apply_1.20.0    zoo_1.8-14             sctransform_0.4.2     
+ [49] httpuv_1.6.16          Matrix_1.7-3           splines_4.4.2         
+ [52] igraph_2.1.4           tidyselect_1.2.1       abind_1.4-8           
+ [55] spatstat.random_3.4-1  codetools_0.2-20       miniUI_0.1.2          
+ [58] spatstat.explore_3.5-2 listenv_0.9.1          lattice_0.22-7        
+ [61] tibble_3.3.0           plyr_1.8.9             withr_3.0.2           
+ [64] shiny_1.11.1           ROCR_1.0-11            Rtsne_0.17            
+ [67] fastDummies_1.7.5      survival_3.8-3         polyclip_1.10-7       
+ [70] fitdistrplus_1.2-4     pillar_1.11.0          KernSmooth_2.23-26    
+ [73] plotly_4.11.0          generics_0.1.4         vroom_1.6.5           
+ [76] RcppHNSW_0.6.0         hms_1.1.3              scales_1.4.0          
+ [79] globals_0.18.0         xtable_1.8-4           glue_1.7.0            
+ [82] lazyeval_0.2.2         tools_4.4.2            data.table_1.17.8     
+ [85] RSpectra_0.16-2        RANN_2.6.2             leiden_0.4.3.1        
+ [88] dotCall64_1.2          cowplot_1.2.0          grid_4.4.2            
+ [91] tidyr_1.3.1            nlme_3.1-168           patchwork_1.3.1       
+ [94] cli_3.6.5              spatstat.sparse_3.1-0  textshaping_0.4.0     
+ [97] spam_2.11-1            viridisLite_0.4.2      uwot_0.2.3            
+[100] gtable_0.3.6           digest_0.6.36          progressr_0.15.1      
+[103] ggrepel_0.9.6          htmlwidgets_1.6.4      farver_2.1.2          
+[106] htmltools_0.5.8.1      lifecycle_1.0.4        httr_1.4.7            
+[109] mime_0.13              bit64_4.6.0-1          MASS_7.3-65           
