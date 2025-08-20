@@ -15,10 +15,10 @@ suppressPackageStartupMessages({
 datasets <- list(
   list(name = "t0",
        in_dir  = "/users/rg/baygun/BlaER_crg/short_read/star/t0_Solo.out/Gene/filtered",
-       out_dir = "/users/rg/baygun/BlaER_crg/short_read/star/result_seurat/t0_seurat_results"),
+       out_dir = "/users/rg/baygun/BlaER_crg/short_read/Seurat/result_seurat/t0_seurat_results"),
   list(name = "t120",
        in_dir  = "/users/rg/baygun/BlaER_crg/short_read/star/t120_Solo.out/Gene/filtered",
-       out_dir = "/users/rg/baygun/BlaER_crg/short_read/star/result_seurat/t120_seurat_results")
+       out_dir = "/users/rg/baygun/BlaER_crg/short_read/Seurat/result_seurat/t120_seurat_results")
 )
 
 # Global analysis params
