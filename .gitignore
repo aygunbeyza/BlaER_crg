@@ -1,7 +1,8 @@
+
 short_read/star/**
 !short_read/star/starsolo.sh
 !short_read/star/star_index.sh
-
+/users/rg/baygun/BlaER_crg/short_read/Seurat/result_seurat
 # Ignore epi2me outputs
 long_read/epi2me/wf-human-variation/
 long_read/epi2me/**/refdata/
