@@ -140,6 +140,62 @@ process_one <- function(name, in_dir, out_dir) {
   save_plot(p_var_afterL, file.path(out_dir, paste0(name, "_doubletfinder_after_variable_features.png")), w=8, h=6)
   save_plot(p_umap_after, file.path(out_dir, paste0(name, "_doubletfinder_after_umap.png")))
 
+# ---- Top10 marker heatmap + gene list saver ----
+make_cluster_heatmap <- function(obj, out_dir, n_top = 10, group_by = "seurat_clusters",
+                                 logfc_cut = 1) {
+  DefaultAssay(obj) <- "SCT"
+
+  # Küme kimlikleri
+  if (!group_by %in% colnames(obj@meta.data)) {
+    stop(sprintf("Column '%s' not found in meta.data", group_by))
+  }
+  Idents(obj) <- obj@meta.data[[group_by]]
+
+  # Markerları bul (pozitif markerlar)
+  markers <- FindAllMarkers(
+    obj, only.pos = TRUE, logfc.threshold = 0, min.pct = 0.1, verbose = FALSE
+  )
+
+  # Bazı Seurat sürümlerinde sütun adı farklı olabilir
+  if (!"avg_log2FC" %in% colnames(markers) && "avg_logFC" %in% colnames(markers)) {
+    markers$avg_log2FC <- markers$avg_logFC
+  }
+
+  # Filtrele ve cluster bazında top-N seç
+  top_markers <- markers |>
+    dplyr::filter(avg_log2FC > logfc_cut) |>
+    dplyr::group_by(cluster) |>
+    dplyr::slice_head(n = n_top) |>
+    dplyr::ungroup()
+
+  # Isı haritası (gen isimleri unique olmalı)
+  feats <- unique(top_markers$gene)
+  p_heat <- DoHeatmap(obj, features = feats, group.by = group_by) + NoLegend()
+
+  # Kayıtlar
+  heat_f   <- file.path(out_dir, sprintf("%s_top%d_markers_heatmap.png", name, n_top))
+  table_f  <- file.path(out_dir, sprintf("%s_top%d_markers_per_cluster.csv", name, n_top))
+  save_plot(p_heat, heat_f, w = 10, h = 8)
+
+  # Top marker tabloyu kaydet
+  readr::write_csv(top_markers, table_f)
+
+  # Cluster başına .txt (genler alt alta)
+  clus_dir <- file.path(out_dir, sprintf("%s_top%d_marker_lists", name, n_top))
+  dir.create(clus_dir, recursive = TRUE, showWarnings = FALSE)
+  splitted <- split(top_markers$gene, top_markers$cluster)
+  for (cl in names(splitted)) {
+    fn <- file.path(clus_dir, sprintf("cluster_%s_top%d_genes.txt", cl, n_top))
+    writeLines(splitted[[cl]], fn)
+  }
+
+  invisible(list(heatmap_file = heat_f, table_file = table_f, dir = clus_dir))
+}
+
+# ---- Top10 marker heatmap + listeler (DF sonrası singlet obje) ----
+make_cluster_heatmap(obj_sing, out_dir, n_top = 10, group_by = "seurat_clusters", logfc_cut = 1)
+
+
   # Save RDS
   saveRDS(obj_filt, file.path(out_dir, paste0(name, "_filtered_sct.rds")))
   saveRDS(obj_df,   file.path(out_dir, paste0(name, "_df_annotated.rds")))
