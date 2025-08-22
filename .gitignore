@@ -1,7 +1,7 @@
 #scnanogps
-/users/rg/baygun/BlaER_crg/long_read/scnanogps/gene_exp_matrix.tsv
-/users/rg/baygun/BlaER_crg/long_read/scnanogps/results_scnanogps
-/users/rg/baygun/BlaER_crg/long_read/scnanogps/scNanoGPS
+/users/rg/baygun/BlaER_crg/long_read/scnanogps/gene_exp_matrix.tsv/
+/users/rg/baygun/BlaER_crg/long_read/scnanogps/results_scnanogps/
+/users/rg/baygun/BlaER_crg/long_read/scnanogps/scNanoGPS/
 
 short_read/star/**
 !short_read/star/starsolo.sh
