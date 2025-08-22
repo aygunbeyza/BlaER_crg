@@ -12,6 +12,8 @@ suppressPackageStartupMessages({
 datasets <- list(
   list(name="t0",   out_dir="/users/rg/baygun/BlaER_crg/short_read/Seurat/result_seurat/t0_seurat_results"),
   list(name="t120", out_dir="/users/rg/baygun/BlaER_crg/short_read/Seurat/result_seurat/t120_seurat_results")
+  list(name="t0_genefull",   out_dir="/users/rg/baygun/BlaER_crg/short_read/Seurat/result_seurat/t0_genefull_seurat_results"),
+  list(name="t120_genefull", out_dir="/users/rg/baygun/BlaER_crg/short_read/Seurat/result_seurat/t120_genefull_seurat_results")
 )
 
 # biomaRt bağlan
@@ -36,7 +38,7 @@ for (ds in datasets) {
   counts <- GetAssayData(obj, assay="RNA", slot="counts")
   g_all  <- rownames(counts)[rowSums(counts) > 0]
 
-  # ENSG'leri SYMBOL'a çevir
+  # ENSG to SYMBOL
   ensg <- g_all[is_ensembl(g_all)]
   symb <- g_all[!is_ensembl(g_all)]
   mapped <- map_ensg_to_symbol(ensg)
@@ -48,10 +50,10 @@ for (ds in datasets) {
                  rep("already_symbol", length(symb)))
   )
 
-  # nihai symbol listesi
+  # symbol list
   symbols <- sort(unique(report$symbol[!is.na(report$symbol) & report$symbol != ""]))
 
-  # dosyalar
+  # files
   out_syms <- file.path(ds$out_dir, paste0(ds$name, "_expressed_genes.symbols.txt"))
   out_rep  <- file.path(ds$out_dir, paste0(ds$name, "_mapping_report.tsv"))
   out_unm  <- file.path(ds$out_dir, paste0(ds$name, "_unmapped_ENSG.txt"))
