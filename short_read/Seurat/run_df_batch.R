@@ -14,11 +14,17 @@ suppressPackageStartupMessages({
 # ---------- User configuration (EDIT HERE) ----------
 datasets <- list(
   list(name = "t0",
-       in_dir  = "/users/rg/baygun/BlaER_crg/short_read/star/t0_Solo.out/Gene/filtered",
+       in_dir  = "/users/rg/baygun/BlaER_crg/short_read/star/t0_with_genefull_Solo.out/Gene/filtered",
        out_dir = "/users/rg/baygun/BlaER_crg/short_read/Seurat/result_seurat/t0_seurat_results"),
   list(name = "t120",
-       in_dir  = "/users/rg/baygun/BlaER_crg/short_read/star/t120_Solo.out/Gene/filtered",
+       in_dir  = "/users/rg/baygun/BlaER_crg/short_read/star/t120_with_genefull_Solo.out/Gene/filtered",
        out_dir = "/users/rg/baygun/BlaER_crg/short_read/Seurat/result_seurat/t120_seurat_results")
+  list(name = "t0_genefull",
+       in_dir  = "/users/rg/baygun/BlaER_crg/short_read/star/t0_with_genefull_Solo.out/GeneFull/filtered",
+       out_dir = "/users/rg/baygun/BlaER_crg/short_read/Seurat/result_seurat/t0_genefull_seurat_results"),
+  list(name = "t120_genefull",
+       in_dir  = "/users/rg/baygun/BlaER_crg/short_read/star/t120_with_genefull_Solo.out/GeneFull/filtered",
+       out_dir = "/users/rg/baygun/BlaER_crg/short_read/Seurat/result_seurat/t120_genefull_seurat_results")
 )
 
 # Global analysis params
