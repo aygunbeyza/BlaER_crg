@@ -8,6 +8,8 @@
 #SBATCH --mail-user=beyza.aygun@crg.eu
 #SBATCH --mail-type=FAIL
 
-module load R/4.x
-Rscript --vanilla ~/run_df_batch.R
+module purge
+module load R/4.4.2-gfbf-2023b
+
+Rscript run_df_batch.R
 
