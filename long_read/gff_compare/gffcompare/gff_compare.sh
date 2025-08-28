@@ -13,7 +13,6 @@
 #2. ref vs lyric
 #3. ref vs isoq
 
-export PATH=/users/rg/baygun/gff_compare/gffcompare:$PATH
 
 gffcompare -r lyric.gtf -o lyric_vs_isoquant isoquant_transcript_models.gtf
 
