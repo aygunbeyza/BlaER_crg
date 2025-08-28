@@ -13,9 +13,9 @@ source ~/.bashrc
 conda activate qc3
 module load Nextflow/24.10.3
 
-BAM_ROOT="/users/rg/baygun/BlaER_crg/files/long_read_files"
-REF_DIR="/users/rg/baygun/BlaER_crg/long_read/epi2me/refdata"
-RESULTS_BASE="/users/rg/baygun/BlaER_crg/long_read/epi2me/results"
+BAM_ROOT="/long_read_files"
+REF_DIR="/refdata"
+RESULTS_BASE="/results"
 
 mkdir -p "$RESULTS_BASE"
 
