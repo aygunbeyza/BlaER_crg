@@ -11,19 +11,19 @@
 source ~/.bashrc
 conda activate sqanti
 
-SQANTI=/users/rg/baygun/BlaER_crg/long_read/sqanti/SQANTI3/sqanti3_qc.py
-REFGTF=/users/rg/baygun/BlaER_crg/long_read/sqanti/ref/gencode.v47.primary_assembly.annotation.gtf
-REFFA=/users/rg/baygun/BlaER_crg/long_read/sqanti/ref/hg38.sorted.fa
-OUTROOT=/users/rg/baygun/BlaER_crg/long_read/sqanti/results
+SQANTI=/sqanti/SQANTI3/sqanti3_qc.py
+REFGTF=ref.gtf
+REFFA=hg38.sorted.fa
+OUTROOT=/sqanti/results
 
 # lyric files
-LYRIC_DIR=/users/rg/baygun/BlaER_crg/long_read/sqanti/ref
+LYRIC_DIR= /ref
 LYRIC_T0=$(ls -1 ${LYRIC_DIR}/*.gff | grep -E 'Hpre' | head -n1)
 LYRIC_T120=$(ls -1 ${LYRIC_DIR}/*.gff | grep -E 'Hv3' | head -n1)
 
 # isoquant files
-ISO_T0="/users/rg/baygun/BlaER_crg/long_read/IsoQuant/result_isoquant_t0/OUT/OUT.transcript_models.gtf"
-ISO_T120="/users/rg/baygun/BlaER_crg/long_read/IsoQuant/result_isoquant_t120/OUT/OUT.transcript_models.gtf"
+ISO_T0="isoquant_t0.gtf"
+ISO_T120="isoquant_t120.gtf"
 
 declare -A RUNS=(
   [lyric_t0]="$LYRIC_T0"
