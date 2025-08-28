@@ -4,10 +4,9 @@ import matplotlib.pyplot as plt
 import os
 
 #path
-t0_path = "/users/rg/baygun/BlaER_crg/long_read/concatemer/result_concatemer/t0.txt"
-t120_path = "/users/rg/baygun/BlaER_crg/long_read/concatemer/result_concatemer/t120.txt"
-save_dir = "/users/rg/baygun/BlaER_crg/long_read/concatemer/
-result_concatemer/"
+t0_path = "/concatemer/result_concatemer/t0.txt"
+t120_path = "/concatemer/result_concatemer/t120.txt"
+save_dir = "/concatemer/result_concatemer/"
 
 # read files
 t0 = pd.read_csv(t0_path, header=None, names=["length"])

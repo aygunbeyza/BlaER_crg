@@ -12,6 +12,6 @@ conda init
 source ~/.bashrc
 conda activate qc3
 
-python /users/rg/baygun/BlaER_crg/long_read/concatemer2/plot.py
-
+python ~ /concatemer/conc.py
+python ~ /concatemer/plot.py
 conda deactivate
