@@ -8,6 +8,9 @@
 #SBATCH --mail-user=beyza.aygun@crg.eu
 #SBATCH --mail-type=FAIL
 
+
+#1.use t0 files together and t120 files togetger
+#2. it wants specific ref files
 conda init
 source ~/.bashrc
 conda activate qc3
