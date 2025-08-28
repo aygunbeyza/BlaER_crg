@@ -12,8 +12,8 @@ conda init
 source ~/.bashrc
 conda activate qc3
 
-IN_DIR="/users/rg/baygun/BlaER_crg/files/long_read_files/all_raw_bams"
-OUT_DIR="/users/rg/baygun/BlaER_crg/long_read/nanoplot/result_nanoplot"
+IN_DIR="/long_read_files/all_raw_bams"
+OUT_DIR="/nanoplot/result_nanoplot"
 
 mkdir -p "$OUT_DIR"
 
