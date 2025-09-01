@@ -15,7 +15,7 @@ datasets <- list(
   list(name="t120_genefull",out_dir="/t120_genefull_seurat_results")
 )
 
-# ---- biomaRt ----
+# biomaR
 mart <- useEnsembl("genes", dataset="hsapiens_gene_ensembl")
 
 is_ensembl <- function(x) grepl("^ENSG\\d+", x)
@@ -34,7 +34,7 @@ map_ensg_to_symbol <- function(ensg) {
   unname(lut[ensg])
 }
 
-# ---- filters (SYMBOL bazlı) ----
+# ---- filters
 is_mt_symbol <- function(sym) grepl("^MT-", sym)
 is_ribosomal_protein <- function(sym) grepl("^(RPS|RPL)[0-9A-Z]+$", sym)
 is_rRNA_symbol <- function(sym) {
@@ -67,16 +67,17 @@ for (ds in datasets) {
     stringsAsFactors = FALSE
   )
 
-  # ---- temiz sembol listesi (NA/boş at) ----
+
   symbols_all <- sort(unique(report$symbol[!is.na(report$symbol) & nzchar(report$symbol)]))
 
-  # ---- filtreler: MT / RPS-RPL / rRNA çıkar ----
+  # ---- filtr: MT / RPS-RPL / rRNA 
+
   to_drop <- symbols_all[
     is_mt_symbol(symbols_all) | is_ribosomal_protein(symbols_all) | is_rRNA_symbol(symbols_all)
   ]
   symbols_filtered <- sort(setdiff(symbols_all, to_drop))
 
-  # ---- dosya yolları ----
+  # paths
   out_syms_all  <- file.path(ds$out_dir, paste0(ds$name, "_expressed_genes.symbols.txt"))
   out_rep	<- file.path(ds$out_dir, paste0(ds$name, "_mapping_report.tsv"))
   out_unmapped  <- file.path(ds$out_dir, paste0(ds$name, "_unmapped_ENSG.txt"))
@@ -85,18 +86,16 @@ for (ds in datasets) {
   out_rep_filt  <- file.path(ds$out_dir, paste0(ds$name, "_mapping_report.filtered.tsv"))
   out_dropped   <- file.path(ds$out_dir, paste0(ds$name, "_dropped_genes.MT_RP_rRNA.txt"))
 
-  # ---- yazımlar (ham) ----
   writeLines(symbols_all, out_syms_all)
   write_tsv(report, out_rep)
   writeLines(sort(unique(report$original[report$status=="unmapped_ENSG"])), out_unmapped)
 
-  # ---- yazımlar (filtrelenmiş) ----
-  # filtrelenmiş rapor: yalnızca kalan semboller
+#report
   report_filt <- report %>%
     filter(symbol %in% symbols_filtered & !(status == "unmapped_ENSG"))
   writeLines(symbols_filtered, out_syms_filt)
   write_tsv(report_filt, out_rep_filt)
-  # düşenleri de kaydet (ne çıkarıldı görmek için)
+#save 
   writeLines(sort(unique(to_drop)), out_dropped)
 
   message(sprintf("[%s] symbols: %d (all) -> %d (filtered).", ds$name, length(symbols_all), length(symbols_filtered)))
