@@ -1,9 +1,9 @@
 import matplotlib.pyplot as plt
 
-supported_polya_p120_file = "/users/rg/baygun/BlaER_crg/long_read/tss/supported_polya_p120.bed"
-unsupported_polya_p120_file = "/users/rg/baygun/BlaER_crg/long_read/tss/unsupported_polya_p120.bed"
-supported_polya_p0_file = "/users/rg/baygun/BlaER_crg/long_read/tss/supported_polya_p0.bed"
-unsupported_polya_p0_file = "/users/rg/baygun/BlaER_crg/long_read/tss/unsupported_polya_p0.bed"
+supported_polya_p120_file = "/supported_polya_p120.bed"
+unsupported_polya_p120_file = "/unsupported_polya_p120.bed"
+supported_polya_p0_file = "/supported_polya_p0.bed"
+unsupported_polya_p0_file = "/unsupported_polya_p0.bed"
 
 # row caount
 def count_lines(file_path):
