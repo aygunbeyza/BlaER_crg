@@ -1,0 +1,135 @@
+req <- c("data.table", "Matrix", "ggplot2")
+miss <- setdiff(req, rownames(installed.packages()))
+if (length(miss)) {
+  options(repos = c(CRAN = "https://cloud.r-project.org"), Ncpus = 4)
+  install.packages(miss)
+}
+suppressPackageStartupMessages({
+  library(Matrix)
+  library(ggplot2)
+})
+suppressPackageStartupMessages({
+  ok <- TRUE
+  tryCatch(library(data.table), error = function(e) ok <<- FALSE)
+  if (!ok) {
+    install.packages("data.table", type = "source", repos = "https://cloud.r-project.org")
+    library(data.table)
+  }
+})
+
+# Long-read (scNanoGPS)
+lr_t0   <- "/T0_scNanoGPS_res/gene_exp_matrix.tsv.gz"
+lr_t120 <- "/T120_scNanoGPS_res/gene_exp_matrix.tsv.gz"
+
+# Short-read (STARsolo: Gene / GeneFull)
+sr_t0_gene_dir       <- "/t0_with_genefull_Solo.out/Gene/filtered"
+sr_t0_genefull_dir   <- "/t0_with_genefull_Solo.out/GeneFull/filtered"
+sr_t120_gene_dir     <- "/t120_with_genefull_Solo.out/Gene/filtered"
+sr_t120_genefull_dir <- "/t120_with_genefull_Solo.out/GeneFull/filtered"
+
+out_dir <- "corr_plots"
+dir.create(out_dir, showWarnings = FALSE, recursive = TRUE)
+
+# Strip Ensembl version (e.g., ENSG... .7 -> ENSG...)
+clean_ensembl <- function(x) sub("\\.\\d+$", "", x)
+
+# Read scNanoGPS LR matrix and make gene-level pseudo-bulk (sum over barcodes)
+read_longread_pb <- function(path){
+  dt <- fread(path)
+  if ("gene_name" %in% names(dt)) {
+    ann_cols <- 1:which(names(dt) == "gene_name")
+  } else {
+    ann_cols <- 1:7
+  }
+  count_cols <- setdiff(seq_len(ncol(dt)), ann_cols)
+  counts <- dt[, rowSums(.SD), .SDcols = count_cols]
+  gene_id <- if ("gene_id" %in% names(dt)) dt[["gene_id"]] else dt[[1]]
+  data.table(gene_id = clean_ensembl(gene_id), count = counts)
+}
+
+# Read STARsolo sparse matrix + features; make gene-level pseudo-bulk
+read_starsolo_pb <- function(dir_path){
+  mtx   <- readMM(gzfile(file.path(dir_path, "matrix.mtx.gz")))
+  feats <- fread(file.path(dir_path, "features.tsv.gz"), header = FALSE)
+  gene_id <- clean_ensembl(feats[[1]])
+  counts  <- as.numeric(rowSums(mtx))
+  dt <- data.table(gene_id = gene_id, count = counts)
+  dt[, .(count = sum(count)), by = gene_id]
+}
+
+# CPM + log1p
+log1p_cpm <- function(dt){
+  lib <- sum(dt$count)
+  dt[, log1p_cpm := log1p((count / lib) * 1e6)]
+  dt
+}
+
+# Scatter with fixed same axes + report Pearson/Spearman
+plot_corr <- function(x, y, title, outfile){
+  mx <- max(c(x, y), na.rm = TRUE)
+  pear  <- suppressWarnings(cor(x, y, method = "pearson",  use = "complete.obs"))
+  spear <- suppressWarnings(cor(x, y, method = "spearman", use = "complete.obs"))
+  df <- data.frame(x = x, y = y)
+
+  p <- ggplot(df, aes(x = x, y = y)) +
+    geom_point(alpha = 0.4, size = 0.7) +
+    geom_abline(slope = 1, intercept = 0, linetype = "dashed") +
+    scale_x_continuous(limits = c(0, mx)) +
+    scale_y_continuous(limits = c(0, mx)) +
+    coord_equal() +
+    labs(
+      x = "Dataset A (log1p CPM)",
+      y = "Dataset B (log1p CPM)",
+      title = paste0(title, sprintf("  |  Pearson=%.3f  Spearman=%.3f", pear, spear))
+    ) +
+    theme_bw(base_size = 11)
+
+  ggsave(outfile, p, width = 6, height = 5, dpi = 300)
+  cat(sprintf("[saved] %s\n", outfile))
+  invisible(list(pearson = pear, spearman = spear))
+}
+
+# ---- READ & PREP ----
+# Long-read pseudo-bulk (T0 & T120)
+lr_pb_t0   <- read_longread_pb(lr_t0)
+lr_pb_t120 <- read_longread_pb(lr_t120)
+
+
+# Short-read pseudo-bulk (Gene & GeneFull, T0 & T120)
+sr_pb_t0_gene        <- read_starsolo_pb(sr_t0_gene_dir)
+sr_pb_t0_genefull    <- read_starsolo_pb(sr_t0_genefull_dir)
+sr_pb_t120_gene      <- read_starsolo_pb(sr_t120_gene_dir)
+sr_pb_t120_genefull  <- read_starsolo_pb(sr_t120_genefull_dir)
+
+# Normalize all (CPM -> log1p)
+lr_pb_t0   <- log1p_cpm(lr_pb_t0)
+lr_pb_t120 <- log1p_cpm(lr_pb_t120)
+sr_pb_t0_gene       <- log1p_cpm(sr_pb_t0_gene)
+sr_pb_t0_genefull   <- log1p_cpm(sr_pb_t0_genefull)
+sr_pb_t120_gene     <- log1p_cpm(sr_pb_t120_gene)
+sr_pb_t120_genefull <- log1p_cpm(sr_pb_t120_genefull)
+
+# Join by genes and plot (fixed axes)
+run_one <- function(A, B, labelA, labelB, tag){
+  m <- merge(A[, .(gene_id, log1p_cpm)],
+             B[, .(gene_id, log1p_cpm)],
+             by = "gene_id", suffixes = c("_A", "_B"))
+  # Optional: keep expressed genes only
+  # m <- m[(log1p_cpm_A + log1p_cpm_B) > 0]
+
+  title <- sprintf("%s vs %s", labelA, labelB)
+  outfile <- file.path(out_dir, sprintf("%s.png", tag))
+  plot_corr(m$log1p_cpm_A, m$log1p_cpm_B, title, outfile)
+}
+
+# ---- MAIN COMPARISONS (LR ↔ SR, fixed axes) ----
+run_one(lr_pb_t0,   sr_pb_t0_gene,	"T0 Long-read",   "T0 Short-read (Gene)",      "T0_LR_vs_T0_SR_Gene")
+run_one(lr_pb_t0,   sr_pb_t0_genefull,  "T0 Long-read",   "T0 Short-read (GeneFull)",  "T0_LR_vs_T0_SR_GeneFull")
+run_one(lr_pb_t120, sr_pb_t120_gene,    "T120 Long-read", "T120 Short-read (Gene)",    "T120_LR_vs_T120_SR_Gene")
+run_one(lr_pb_t120, sr_pb_t120_genefull,"T120 Long-read", "T120 Short-read (GeneFull)","T120_LR_vs_T120_SR_GeneFull")
+
+# ---- OPTIONAL: within-tech time consistency ----
+run_one(lr_pb_t0,   lr_pb_t120,         "T0 Long-read",   "T120 Long-read",            "LR_T0_vs_T120")
+run_one(sr_pb_t0_gene, sr_pb_t120_gene, "T0 SR (Gene)",   "T120 SR (Gene)",            "SR_Gene_T0_vs_T120")
+run_one(sr_pb_t0_genefull, sr_pb_t120_genefull, "T0 SR (GeneFull)", "T120 SR (GeneFull)", "SR_GeneFull_T0_vs_T120")
+
