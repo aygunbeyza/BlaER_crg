@@ -12,7 +12,7 @@ module load STAR/2.7.11b-GCC-12.3.0
 
 STAR --runThreadN 4 \
 --runMode genomeGenerate \
---genomeDir "/users/rg/baygun/BlaER_crg/short_read/star/deneme_genome_index/" \
---genomeFastaFiles "/users/rg/baygun/BlaER_crg/short_read/star/star_indexes/hg38.fa" \
---sjdbGTFfile "/users/rg/baygun/BlaER_crg/short_read/star/star_indexes/gencode.v47.primary_assembly.annotation.gtf" \
+--genomeDir "/genome_index/" \
+--genomeFastaFiles "/hg38.fa" \
+--sjdbGTFfile "/.annotation.gtf" \
 --sjdbOverhang 89
