@@ -1,9 +1,9 @@
 import matplotlib.pyplot as plt
 
-supported_tss_t120_file = "/users/rg/baygun/BlaER_crg/long_read/tss/supported_tss_t120.bed"
-unsupported_tss_t120_file = "/users/rg/baygun/BlaER_crg/long_read/tss/unsupported_tss_t120.bed"
-supported_tss_t0_file = "/users/rg/baygun/BlaER_crg/long_read/tss/supported_tss_t0.bed"
-unsupported_tss_t0_file = "/users/rg/baygun/BlaER_crg/long_read/tss/unsupported_tss_t0.bed"
+supported_tss_t120_file = "/supported_tss_t120.bed"
+unsupported_tss_t120_file = "unsupported_tss_t120.bed"
+supported_tss_t0_file = "/supported_tss_t0.bed"
+unsupported_tss_t0_file = "/unsupported_tss_t0.bed"
 
 # TSS 
 def count_lines(file_path):
