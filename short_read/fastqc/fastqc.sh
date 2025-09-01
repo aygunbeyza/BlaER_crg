@@ -12,6 +12,6 @@ conda init
 source ~/.bashrc
 conda activate qc3
 
-fastqc /users/rg/baygun/BlaER/files/short_read_files/*.fastq.gz -o /users/rg/baygun/BlaER/short_read/fastqc/result_fastqc
+fastqc /short_read_files/*.fastq.gz -o /fastqc/result_fastqc
 
 conda deactivate
